@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Git\\SeventhTest.API\\SeventhTest.API\\SeventhTest.API.csproj": {}
+    "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.API\\SeventhTest.API.csproj": {}
   },
   "projects": {
-    "C:\\Git\\SeventhTest.API\\SeventhTest.API\\SeventhTest.API.csproj": {
+    "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.API\\SeventhTest.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Git\\SeventhTest.API\\SeventhTest.API\\SeventhTest.API.csproj",
+        "projectUniqueName": "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.API\\SeventhTest.API.csproj",
         "projectName": "SeventhTest.API",
-        "projectPath": "C:\\Git\\SeventhTest.API\\SeventhTest.API\\SeventhTest.API.csproj",
+        "projectPath": "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.API\\SeventhTest.API.csproj",
         "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
-        "outputPath": "C:\\Git\\SeventhTest.API\\SeventhTest.API\\obj\\",
+        "outputPath": "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -31,7 +31,17 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.BO\\SeventhTest.BO.csproj": {
+                "projectPath": "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.BO\\SeventhTest.BO.csproj"
+              },
+              "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.DAO\\SeventhTest.DAO.csproj": {
+                "projectPath": "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.DAO\\SeventhTest.DAO.csproj"
+              },
+              "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.ENTITY\\SeventhTest.ENTITY.csproj": {
+                "projectPath": "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.ENTITY\\SeventhTest.ENTITY.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -69,6 +79,51 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.BO\\SeventhTest.BO.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.BO\\SeventhTest.BO.csproj",
+        "projectName": "SeventhTest.BO",
+        "projectPath": "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.BO\\SeventhTest.BO.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.DAO\\SeventhTest.DAO.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.DAO\\SeventhTest.DAO.csproj",
+        "projectName": "SeventhTest.DAO",
+        "projectPath": "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.DAO\\SeventhTest.DAO.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.ENTITY\\SeventhTest.ENTITY.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.ENTITY\\SeventhTest.ENTITY.csproj",
+        "projectName": "SeventhTest.ENTITY",
+        "projectPath": "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.ENTITY\\SeventhTest.ENTITY.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
       }
     }
   }

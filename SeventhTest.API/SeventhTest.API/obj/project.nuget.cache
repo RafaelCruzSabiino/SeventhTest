@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "52gzgA4ZbcA/T5Kdk9pGAdiaJjOGM1o2U8wdj0bevjduDfnfMErkDbPd4y9Sa11YLKgGAY2u295w+WhpSfYPmw==",
+  "dgSpecHash": "GJDcwebSzEiX4WknUMQuljfoS/1GKTP/r8lkW9puv7iljO4AC5VUx5ZPcujUXFZthmpRHHgOjdvZNgc5EG0tPw==",
   "success": true,
-  "projectFilePath": "C:\\Git\\SeventhTest.API\\SeventhTest.API\\SeventhTest.API.csproj",
+  "projectFilePath": "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.API\\SeventhTest.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rafae\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\rafae\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
