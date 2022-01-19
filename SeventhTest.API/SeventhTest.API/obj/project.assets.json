@@ -75,6 +75,10 @@
       },
       "SeventhTest.BO/1.0.0": {
         "type": "project",
+        "dependencies": {
+          "SeventhTest.DAO": "1.0.0",
+          "SeventhTest.ENTITY": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/SeventhTest.BO.dll": {}
         },
@@ -84,6 +88,9 @@
       },
       "SeventhTest.DAO/1.0.0": {
         "type": "project",
+        "dependencies": {
+          "SeventhTest.ENTITY": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/SeventhTest.DAO.dll": {}
         },

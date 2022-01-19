@@ -1,0 +1,14 @@
+C:\Git\SeventhTest\SeventhTest.API\SeventhTest.BO\bin\Debug\SeventhTest.BO.dll
+C:\Git\SeventhTest\SeventhTest.API\SeventhTest.BO\bin\Debug\SeventhTest.BO.pdb
+C:\Git\SeventhTest\SeventhTest.API\SeventhTest.BO\bin\Debug\Microsoft.Analytics.Interfaces.dll
+C:\Git\SeventhTest\SeventhTest.API\SeventhTest.BO\bin\Debug\Microsoft.Analytics.Interfaces.Streaming.dll
+C:\Git\SeventhTest\SeventhTest.API\SeventhTest.BO\bin\Debug\Microsoft.Analytics.Types.dll
+C:\Git\SeventhTest\SeventhTest.API\SeventhTest.BO\bin\Debug\SeventhTest.DAO.dll
+C:\Git\SeventhTest\SeventhTest.API\SeventhTest.BO\bin\Debug\SeventhTest.ENTITY.dll
+C:\Git\SeventhTest\SeventhTest.API\SeventhTest.BO\bin\Debug\SeventhTest.DAO.pdb
+C:\Git\SeventhTest\SeventhTest.API\SeventhTest.BO\bin\Debug\SeventhTest.ENTITY.pdb
+C:\Git\SeventhTest\SeventhTest.API\SeventhTest.BO\obj\Debug\SeventhTest.BO.csproj.AssemblyReference.cache
+C:\Git\SeventhTest\SeventhTest.API\SeventhTest.BO\obj\Debug\SeventhTest.BO.csproj.CoreCompileInputs.cache
+C:\Git\SeventhTest\SeventhTest.API\SeventhTest.BO\obj\Debug\SeventhTest.BO.csproj.CopyComplete
+C:\Git\SeventhTest\SeventhTest.API\SeventhTest.BO\obj\Debug\SeventhTest.BO.dll
+C:\Git\SeventhTest\SeventhTest.API\SeventhTest.BO\obj\Debug\SeventhTest.BO.pdb

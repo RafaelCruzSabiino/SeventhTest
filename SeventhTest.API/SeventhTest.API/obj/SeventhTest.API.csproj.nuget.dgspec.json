@@ -88,7 +88,14 @@
         "projectPath": "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.BO\\SeventhTest.BO.csproj",
         "frameworks": {
           "net472": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.DAO\\SeventhTest.DAO.csproj": {
+                "projectPath": "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.DAO\\SeventhTest.DAO.csproj"
+              },
+              "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.ENTITY\\SeventhTest.ENTITY.csproj": {
+                "projectPath": "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.ENTITY\\SeventhTest.ENTITY.csproj"
+              }
+            }
           }
         }
       },
@@ -103,7 +110,11 @@
         "projectPath": "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.DAO\\SeventhTest.DAO.csproj",
         "frameworks": {
           "net472": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.ENTITY\\SeventhTest.ENTITY.csproj": {
+                "projectPath": "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.ENTITY\\SeventhTest.ENTITY.csproj"
+              }
+            }
           }
         }
       },

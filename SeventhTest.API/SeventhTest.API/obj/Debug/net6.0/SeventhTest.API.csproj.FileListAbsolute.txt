@@ -25,3 +25,9 @@ C:\Git\SeventhTest\SeventhTest.API\SeventhTest.API\obj\Debug\net6.0\SeventhTest.
 C:\Git\SeventhTest\SeventhTest.API\SeventhTest.API\obj\Debug\net6.0\ref\SeventhTest.API.dll
 C:\Git\SeventhTest\SeventhTest.API\SeventhTest.API\obj\Debug\net6.0\SeventhTest.API.pdb
 C:\Git\SeventhTest\SeventhTest.API\SeventhTest.API\obj\Debug\net6.0\SeventhTest.API.genruntimeconfig.cache
+C:\Git\SeventhTest\SeventhTest.API\SeventhTest.API\bin\Debug\net6.0\SeventhTest.BO.dll
+C:\Git\SeventhTest\SeventhTest.API\SeventhTest.API\bin\Debug\net6.0\SeventhTest.DAO.dll
+C:\Git\SeventhTest\SeventhTest.API\SeventhTest.API\bin\Debug\net6.0\SeventhTest.ENTITY.dll
+C:\Git\SeventhTest\SeventhTest.API\SeventhTest.API\bin\Debug\net6.0\SeventhTest.BO.pdb
+C:\Git\SeventhTest\SeventhTest.API\SeventhTest.API\bin\Debug\net6.0\SeventhTest.DAO.pdb
+C:\Git\SeventhTest\SeventhTest.API\SeventhTest.API\bin\Debug\net6.0\SeventhTest.ENTITY.pdb

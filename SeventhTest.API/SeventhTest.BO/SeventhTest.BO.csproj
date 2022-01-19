@@ -43,8 +43,17 @@
     <Reference Include="Microsoft.Analytics.Types" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SeventhTest.DAO\SeventhTest.DAO.csproj">
+      <Project>{4955a77a-7d24-4072-ae32-7dc2c777999c}</Project>
+      <Name>SeventhTest.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SeventhTest.ENTITY\SeventhTest.ENTITY.csproj">
+      <Project>{b3b41ffc-334a-43d7-bb5f-fba8ce1acb7c}</Project>
+      <Name>SeventhTest.ENTITY</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
