@@ -48,7 +48,7 @@ namespace SeventhTest.DAO
         {
             Connect();
 
-            using (var cmd = _objConnection.CreateCommand()) 
+            using (var cmd = objConnection.CreateCommand()) 
             {
                 cmd.CommandType    = CommandType.StoredProcedure;
                 cmd.CommandText    = Sdg00010001;
@@ -61,25 +61,15 @@ namespace SeventhTest.DAO
                 cmd.Parameters.AddWithValue(ParamDateAlter,  entity.DateAlter);
                 cmd.Parameters.AddWithValue(ParamDateInsert, entity.DateInsert);
 
-                using (var RetBase = cmd.ExecuteReader())
-                {
-                    while (RetBase.Read())
-                    {
-                        lastInsertId = Convert.ToInt32(RetBase[ParamReturnValue]);
-                    }
-                }
+                return ExecuteData(cmd);
             }
-
-            CloseConnection();
-
-            return lastInsertId;
         }
 
         public int Update(Servidor entity)
         {
             Connect();
 
-            using (var cmd = _objConnection.CreateCommand())
+            using (var cmd = objConnection.CreateCommand())
             {
                 cmd.CommandType    = CommandType.StoredProcedure;
                 cmd.CommandText    = Sdg00010002;
@@ -91,25 +81,15 @@ namespace SeventhTest.DAO
                 cmd.Parameters.AddWithValue(ParamPort,      entity.Port);
                 cmd.Parameters.AddWithValue(ParamDateAlter, entity.DateAlter);
 
-                using (var RetBase = cmd.ExecuteReader())
-                {
-                    while (RetBase.Read())
-                    {
-                        rowsAffected = Convert.ToInt32(RetBase[ParamReturnValue]);
-                    }
-                }
+                return ExecuteData(cmd);
             }
-
-            CloseConnection();
-
-            return rowsAffected;
         }
 
         public int Delete(int id)
         {
             Connect();
 
-            using (var cmd = _objConnection.CreateCommand())
+            using (var cmd = objConnection.CreateCommand())
             {
                 cmd.CommandType    = CommandType.StoredProcedure;
                 cmd.CommandText    = Sdg00010003;
@@ -117,25 +97,15 @@ namespace SeventhTest.DAO
 
                 cmd.Parameters.AddWithValue(ParamId, id);
 
-                using (var RetBase = cmd.ExecuteReader())
-                {
-                    while (RetBase.Read())
-                    {
-                        rowsAffected = Convert.ToInt32(RetBase[ParamReturnValue]);
-                    }
-                }
+                return ExecuteData(cmd);
             }
-
-            CloseConnection();
-
-            return rowsAffected;
         }
 
         public Servidor Get(int id)
         {
             Connect();
 
-            using (var cmd = _objConnection.CreateCommand())
+            using (var cmd = objConnection.CreateCommand())
             {
                 cmd.CommandType    = CommandType.StoredProcedure;
                 cmd.CommandText    = Sdg00010004;
@@ -143,10 +113,7 @@ namespace SeventhTest.DAO
 
                 cmd.Parameters.AddWithValue(ParamId, id);
 
-                using (var RetBase = cmd.ExecuteReader()) 
-                {
-                    return DataReaderToEntity(RetBase);
-                }
+                return ExecuteDataReaderEntity(cmd);
             }
         }
 
@@ -154,16 +121,13 @@ namespace SeventhTest.DAO
         {
             Connect();
 
-            using (var cmd = _objConnection.CreateCommand())
+            using (var cmd = objConnection.CreateCommand())
             {
                 cmd.CommandType    = CommandType.StoredProcedure;
                 cmd.CommandText    = Sdg00010005;
                 cmd.CommandTimeout = 0;
 
-                using (var RetBase = cmd.ExecuteReader())
-                {
-                    return DataReaderToEntities(RetBase);
-                }
+                return ExecuteDataReaderEntities(cmd);
             }
         }
 

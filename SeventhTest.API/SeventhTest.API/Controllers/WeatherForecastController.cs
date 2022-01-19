@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using SeventhTest.ENTITY;
 
 namespace SeventhTest.API.Controllers
 {

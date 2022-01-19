@@ -1,4 +1,5 @@
-﻿using SeventhTest.DAO.Interfaces;
+﻿using MySql.Data.MySqlClient;
+using SeventhTest.ENTITY.Base;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -7,12 +8,13 @@ using System.Reflection;
 
 namespace SeventhTest.DAO.Base
 {
-    public abstract class BaseDao<TEntity> : Connection
+    public abstract class BaseDao<TEntity>
     {
         #region "Variables"
 
-        protected int rowsAffected = 0;
-        protected int lastInsertId = 0;
+        private static string            _strConnection;
+        protected static MySqlConnection  objConnection;
+        protected static MySqlTransaction transaction;
 
         #endregion
 
@@ -35,6 +37,8 @@ namespace SeventhTest.DAO.Base
 
         public BaseDao() 
         {
+            _strConnection = new DataConnection().StrConnection();
+
             DbNameToDtoName = new Dictionary<string, string>() 
                                         { 
                                             {"ID",          "Id"        }, 
@@ -45,9 +49,96 @@ namespace SeventhTest.DAO.Base
 
         #endregion
 
-        #region "Public Methods"
+        #region "Protected Methods"
 
-        public TEntity DataReaderToEntity(IDataReader idr, bool read = false)
+        protected static void Connect()
+        {
+            try
+            {
+                objConnection = new MySqlConnection();
+                objConnection.ConnectionString = _strConnection;
+                objConnection.Open();
+            }
+            catch (MySqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            catch (Exception)
+            {
+                throw new Exception("Erro ao tentar se conectar ao banco!");
+            }
+        }
+
+        protected static void CloseConnection()
+        {
+            objConnection.Close();
+        }
+
+        protected static void BeginTranstion()
+        {
+            transaction = objConnection.BeginTransaction();
+        }
+
+        protected static void RowBack()
+        {
+
+            transaction.Rollback();
+        }
+
+        protected static void Commit()
+        {
+            transaction.Commit();
+        }
+
+        protected static int ExecuteData(MySqlCommand cmd) 
+        {
+            BeginTranstion();
+
+            try
+            {
+                int lastInsertId = (int)cmd.ExecuteScalar();
+
+                Commit();
+
+                CloseConnection();
+
+                return lastInsertId;
+            }
+            catch (MySqlException ex) 
+            {
+                RowBack();
+                CloseConnection();
+                throw new Exception(ex.Message);
+            }
+            catch (Exception)
+            {
+                RowBack();
+                CloseConnection();
+                throw new Exception("Erro na execução");
+            }
+        }
+
+        protected TEntity ExecuteDataReaderEntity(MySqlCommand cmd) 
+        {
+            using (var RetBase = cmd.ExecuteReader())
+            {
+                return DataReaderToEntity(RetBase);
+            }
+        }
+
+        protected IEnumerable<TEntity> ExecuteDataReaderEntities(MySqlCommand cmd) 
+        {
+            using (var RetBase = cmd.ExecuteReader())
+            {
+                return DataReaderToEntities(RetBase);
+            }
+        }
+
+        #endregion
+
+        #region "Private Methods"
+
+        private TEntity DataReaderToEntity(IDataReader idr, bool read = false)
         {
             var dto = Activator.CreateInstance<TEntity>();
 
@@ -77,7 +168,7 @@ namespace SeventhTest.DAO.Base
             return dto;
         }
 
-        public IList<TEntity> DataReaderToEntities(IDataReader idr)
+        private IList<TEntity> DataReaderToEntities(IDataReader idr)
         {
             var result = new List<TEntity>();
 

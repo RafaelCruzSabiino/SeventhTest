@@ -29,7 +29,7 @@ namespace SeventhTest.ENTITY.Base
         #region "Properties"
 
         public TEntity        Item  { get; set; }
-        public IList<TEntity> Items { get; set; }
+        public IEnumerable<TEntity> Items { get; set; }
 
         #endregion
     }
