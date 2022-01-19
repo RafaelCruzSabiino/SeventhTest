@@ -3,8 +3,8 @@ C:\Git\SeventhTest\SeventhTest.API\SeventhTest.ENTITY\bin\Debug\SeventhTest.ENTI
 C:\Git\SeventhTest\SeventhTest.API\SeventhTest.ENTITY\bin\Debug\Microsoft.Analytics.Interfaces.dll
 C:\Git\SeventhTest\SeventhTest.API\SeventhTest.ENTITY\bin\Debug\Microsoft.Analytics.Interfaces.Streaming.dll
 C:\Git\SeventhTest\SeventhTest.API\SeventhTest.ENTITY\bin\Debug\Microsoft.Analytics.Types.dll
-C:\Git\SeventhTest\SeventhTest.API\SeventhTest.ENTITY\obj\Debug\SeventhTest.ENTITY.csproj.AssemblyReference.cache
 C:\Git\SeventhTest\SeventhTest.API\SeventhTest.ENTITY\obj\Debug\SeventhTest.ENTITY.csproj.CoreCompileInputs.cache
 C:\Git\SeventhTest\SeventhTest.API\SeventhTest.ENTITY\obj\Debug\SeventhTest.ENTITY.csproj.CopyComplete
 C:\Git\SeventhTest\SeventhTest.API\SeventhTest.ENTITY\obj\Debug\SeventhTest.ENTITY.dll
 C:\Git\SeventhTest\SeventhTest.API\SeventhTest.ENTITY\obj\Debug\SeventhTest.ENTITY.pdb
+C:\Git\SeventhTest\SeventhTest.API\SeventhTest.ENTITY\obj\Debug\SeventhTest.ENTITY.csproj.AssemblyReference.cache

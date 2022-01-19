@@ -89,9 +89,6 @@
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.DAO\\SeventhTest.DAO.csproj": {
-                "projectPath": "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.DAO\\SeventhTest.DAO.csproj"
-              },
               "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.ENTITY\\SeventhTest.ENTITY.csproj": {
                 "projectPath": "C:\\Git\\SeventhTest\\SeventhTest.API\\SeventhTest.ENTITY\\SeventhTest.ENTITY.csproj"
               }

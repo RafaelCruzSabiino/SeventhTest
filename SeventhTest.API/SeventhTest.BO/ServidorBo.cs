@@ -10,11 +10,12 @@ namespace SeventhTest.BO
     public class ServidorBo : BaseBo<Servidor, ServidorDao>, IBaseBo<Servidor>
     {
         #region "Public Methods"
-
+        
         public ResultInfo Add(Servidor entity)
-        {
+        {            
             try
             {
+                entity.Id     = new Guid().ToString();
                 resultInfo.Id = Dao.Add(entity);
 
                 if (resultInfo.Id <= 0) 

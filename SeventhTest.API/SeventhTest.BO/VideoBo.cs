@@ -15,6 +15,7 @@ namespace SeventhTest.BO
         {
             try
             {
+                entity.Id     = new Guid().ToString();
                 resultInfo.Id = Dao.Add(entity);
 
                 if (resultInfo.Id <= 0) 

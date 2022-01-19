@@ -17,8 +17,8 @@
         {
             Server   = "localhost";
             User     = "root";
-            Password = "rfc@1001";
-            Base     = "SEVENTH_DGUARD";
+            Password = "";
+            Base     = "seventh_dguard";
         }
 
         #endregion
@@ -27,7 +27,7 @@
 
         public string StrConnection()
         {
-            return string.Format("Server={0};Database={1};Uid={2};Pwd={3};Port=3306", Server, Base, User, Password);
+            return string.Format("server={0};database={1};uid={2};pwd={3};port=3306", Server, Base, User, Password);
         }
 
         #endregion

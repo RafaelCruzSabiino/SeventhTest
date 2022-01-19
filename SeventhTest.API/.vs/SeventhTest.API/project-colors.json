@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e1e5128e-7da1-448a-b3f6-0c4ce1e63d0b": {
+      "ProjectGuid": "e1e5128e-7da1-448a-b3f6-0c4ce1e63d0b",
+      "DisplayName": "SeventhTest.API",
+      "ColorIndex": 0
+    },
+    "6b4790de-fc34-4e80-bd45-076ed8911f23": {
+      "ProjectGuid": "6b4790de-fc34-4e80-bd45-076ed8911f23",
+      "DisplayName": "SeventhTest.BO",
+      "ColorIndex": 1
+    },
+    "b3b41ffc-334a-43d7-bb5f-fba8ce1acb7c": {
+      "ProjectGuid": "b3b41ffc-334a-43d7-bb5f-fba8ce1acb7c",
+      "DisplayName": "SeventhTest.ENTITY",
+      "ColorIndex": 2
+    },
+    "4955a77a-7d24-4072-ae32-7dc2c777999c": {
+      "ProjectGuid": "4955a77a-7d24-4072-ae32-7dc2c777999c",
+      "DisplayName": "SeventhTest.DAO",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Arquivos Diversos",
+      "ColorIndex": -1
+    },
+    "ced3eb10-b945-4a83-acfd-99e8934c5b0a": {
+      "ProjectGuid": "ced3eb10-b945-4a83-acfd-99e8934c5b0a",
+      "DisplayName": "2-BusinessObject",
+      "ColorIndex": 4
+    },
+    "2cb88095-7fd1-4b31-82fc-6259f999fe7c": {
+      "ProjectGuid": "2cb88095-7fd1-4b31-82fc-6259f999fe7c",
+      "DisplayName": "4-DataObjectAccess",
+      "ColorIndex": 5
+    }
+  },
+  "NextColorIndex": 6
+}

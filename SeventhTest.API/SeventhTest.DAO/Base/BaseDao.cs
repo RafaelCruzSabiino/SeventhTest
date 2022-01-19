@@ -55,8 +55,7 @@ namespace SeventhTest.DAO.Base
         {
             try
             {
-                objConnection = new MySqlConnection();
-                objConnection.ConnectionString = _strConnection;
+                objConnection = new MySqlConnection(_strConnection);
                 objConnection.Open();
             }
             catch (MySqlException ex)
