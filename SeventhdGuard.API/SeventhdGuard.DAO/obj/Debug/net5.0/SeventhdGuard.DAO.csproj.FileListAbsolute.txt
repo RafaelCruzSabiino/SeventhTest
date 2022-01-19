@@ -1,0 +1,15 @@
+C:\Git\SeventhdGuard.API\SeventhdGuard.DAO\bin\Debug\net5.0\SeventhdGuard.DAO.deps.json
+C:\Git\SeventhdGuard.API\SeventhdGuard.DAO\bin\Debug\net5.0\SeventhdGuard.DAO.dll
+C:\Git\SeventhdGuard.API\SeventhdGuard.DAO\bin\Debug\net5.0\ref\SeventhdGuard.DAO.dll
+C:\Git\SeventhdGuard.API\SeventhdGuard.DAO\bin\Debug\net5.0\SeventhdGuard.DAO.pdb
+C:\Git\SeventhdGuard.API\SeventhdGuard.DAO\bin\Debug\net5.0\SeventhdGuard.ENTITY.dll
+C:\Git\SeventhdGuard.API\SeventhdGuard.DAO\bin\Debug\net5.0\SeventhdGuard.ENTITY.pdb
+C:\Git\SeventhdGuard.API\SeventhdGuard.DAO\obj\Debug\net5.0\SeventhdGuard.DAO.csproj.AssemblyReference.cache
+C:\Git\SeventhdGuard.API\SeventhdGuard.DAO\obj\Debug\net5.0\SeventhdGuard.DAO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\SeventhdGuard.API\SeventhdGuard.DAO\obj\Debug\net5.0\SeventhdGuard.DAO.AssemblyInfoInputs.cache
+C:\Git\SeventhdGuard.API\SeventhdGuard.DAO\obj\Debug\net5.0\SeventhdGuard.DAO.AssemblyInfo.cs
+C:\Git\SeventhdGuard.API\SeventhdGuard.DAO\obj\Debug\net5.0\SeventhdGuard.DAO.csproj.CoreCompileInputs.cache
+C:\Git\SeventhdGuard.API\SeventhdGuard.DAO\obj\Debug\net5.0\SeventhdGuard.DAO.csproj.CopyComplete
+C:\Git\SeventhdGuard.API\SeventhdGuard.DAO\obj\Debug\net5.0\SeventhdGuard.DAO.dll
+C:\Git\SeventhdGuard.API\SeventhdGuard.DAO\obj\Debug\net5.0\ref\SeventhdGuard.DAO.dll
+C:\Git\SeventhdGuard.API\SeventhdGuard.DAO\obj\Debug\net5.0\SeventhdGuard.DAO.pdb
