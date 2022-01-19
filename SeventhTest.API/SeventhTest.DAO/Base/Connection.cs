@@ -6,10 +6,10 @@ namespace SeventhTest.DAO.Base
 {
     public class Connection
     {
-        #region "Common Variables"
+        #region "Variables"
 
-        private static string          _strConnection;
-        private static MySqlConnection _objConnection;
+        private   static string          _strConnection;
+        protected static MySqlConnection _objConnection;
 
         #endregion
 

@@ -10,6 +10,7 @@ namespace SeventhTest.ENTITY.Base
         public int       Id           { get; set; }
         public int       RowsAffected { get; set; }
         public bool      Success      { get; set; }
+        public string    Message      { get; set; }
         public Exception Exception    { get; set; }
 
         public ResultInfo() 
@@ -17,6 +18,7 @@ namespace SeventhTest.ENTITY.Base
             Id           = 0;
             RowsAffected = 0;
             Success      = true;
+            Message      = "Executado Com Sucesso!";
         }
 
         #endregion

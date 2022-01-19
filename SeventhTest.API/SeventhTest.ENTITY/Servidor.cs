@@ -6,9 +6,9 @@ namespace SeventhTest.ENTITY
     {
         #region "Properties"
 
-        public string Nome     { get; set; }
-        public string Endereco { get; set; }
-        public int    Porta    { get; set; }
+        public string Name { get; set; }
+        public string Ip   { get; set; }
+        public int    Port { get; set; }
 
         #endregion
     }

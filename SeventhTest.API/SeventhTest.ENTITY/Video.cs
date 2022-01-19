@@ -6,8 +6,8 @@ namespace SeventhTest.ENTITY
     {
         #region "Properties"
 
-        public string IdServer  { get; set; }
-        public string Descricao { get; set; }
+        public string IdServer    { get; set; }
+        public string Description { get; set; }
 
         #endregion
     }

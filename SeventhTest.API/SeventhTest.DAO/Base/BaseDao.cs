@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SeventhTest.DAO.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -8,12 +9,19 @@ namespace SeventhTest.DAO.Base
 {
     public abstract class BaseDao<TEntity> : Connection
     {
+        #region "Variables"
+
+        protected int rowsAffected = 0;
+        protected int lastInsertId = 0;
+
+        #endregion
+
         #region "Constants"
 
-        protected const string ParamReturnValue   = "RETURN_VALUE";
-        protected const string ParamId            = "ID";
-        protected const string ParamDataAlteracao = "DATA_ALTERACAO";
-        protected const string ParamDataInsercao  = "DATA_INSERCAO";
+        protected const string ParamReturnValue = "pRETURN_VALUE";
+        protected const string ParamId          = "pID";
+        protected const string ParamDateAlter   = "pDATE_ALTER";
+        protected const string ParamDateInsert  = "pDATE_INSERT";
 
         #endregion
 
@@ -29,9 +37,9 @@ namespace SeventhTest.DAO.Base
         {
             DbNameToDtoName = new Dictionary<string, string>() 
                                         { 
-                                            {"ID",             "Id"           }, 
-                                            {"DATA_ALTERACAO", "DataAlteracao"}, 
-                                            {"DATA_INSERCAO",  "DataInsercao" }
+                                            {"ID",          "Id"        }, 
+                                            {"DATE_ALTER",  "DateAlter" },
+                                            {"DATE_INSERT", "DateInsert"}
                                         };
         }
 
@@ -61,6 +69,11 @@ namespace SeventhTest.DAO.Base
                 }
             }
 
+            if (!read) 
+            {
+                CloseConnection();
+            }
+
             return dto;
         }
 
@@ -73,8 +86,10 @@ namespace SeventhTest.DAO.Base
                 result.Add(DataReaderToEntity(idr, true));
             }
 
+            CloseConnection();
+
             return result;
-        }
+        }        
 
         #endregion
     }

@@ -6,9 +6,9 @@ namespace SeventhTest.ENTITY.Base
     {
         #region "Properties"
 
-        public int      Id            { get; set; }
-        public DateTime DataAlteracao { get; set; }
-        public DateTime DataInsercao  { get; set; }
+        public int      Id         { get; set; }
+        public DateTime DateAlter  { get; set; }
+        public DateTime DateInsert { get; set; }
 
         #endregion
     }

@@ -86,8 +86,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\BaseDao.cs" />
     <Compile Include="Base\Connection.cs" />
+    <Compile Include="Interfaces\IBaseDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServidorDao.cs" />
+    <Compile Include="VideoDao.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SeventhTest.ENTITY\SeventhTest.ENTITY.csproj">
