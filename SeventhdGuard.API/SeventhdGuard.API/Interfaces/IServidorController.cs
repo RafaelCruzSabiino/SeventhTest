@@ -9,6 +9,6 @@ namespace SeventhdGuard.API.Interfaces
         ObjectResult Delete(string serverId);
         ObjectResult Get(string serverId);
         ObjectResult GetAll();
-        bool ServerVerify(string serverId);
+        StatusCodeResult ServerVerify(string serverId);
     }
 }

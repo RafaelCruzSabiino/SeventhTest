@@ -9,7 +9,7 @@ namespace SeventhdGuard.API.Controllers
 {
     [Route("api/servers")]
     [ApiController]
-    public partial class ServidorController : ControllerBase, IServidorController
+    public class ServidorController : ControllerBase, IServidorController
     {
         #region "Variables"
 
@@ -57,9 +57,16 @@ namespace SeventhdGuard.API.Controllers
         }
 
         [HttpGet("available/{serverId}")]
-        public bool ServerVerify(string serverId)
+        public StatusCodeResult ServerVerify(string serverId)
         {
-            return false;
+            var result = ServidorBo.Get(serverId);
+
+            if (result.Success && result.Item != null && !string.IsNullOrEmpty(result.Item.Id)) 
+            {
+                return Ok();
+            }
+
+            return BadRequest();
         }
 
         #endregion
