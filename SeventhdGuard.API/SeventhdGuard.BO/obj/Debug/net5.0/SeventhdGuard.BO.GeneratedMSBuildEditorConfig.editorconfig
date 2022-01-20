@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = SeventhdGuard.BO
-build_property.ProjectDir = C:\Git\SeventhdGuard.API\SeventhdGuard.BO\
+build_property.ProjectDir = C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.BO\

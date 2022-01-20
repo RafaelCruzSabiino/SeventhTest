@@ -7,7 +7,7 @@ using System;
 
 namespace SeventhdGuard.BO
 {
-    public class ServidorBo : BaseBo<Servidor, ServidorDao>, IBaseBo<Servidor>
+    public class ServidorBo : BaseBo<Servidor, ServidorDao>, IServidorBo
     {
         #region "Public Methods"
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.API\\SeventhdGuard.API.csproj": {}
+    "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.API\\SeventhdGuard.API.csproj": {}
   },
   "projects": {
-    "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.API\\SeventhdGuard.API.csproj": {
+    "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.API\\SeventhdGuard.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.API\\SeventhdGuard.API.csproj",
+        "projectUniqueName": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.API\\SeventhdGuard.API.csproj",
         "projectName": "SeventhdGuard.API",
-        "projectPath": "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.API\\SeventhdGuard.API.csproj",
+        "projectPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.API\\SeventhdGuard.API.csproj",
         "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
-        "outputPath": "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.API\\obj\\",
+        "outputPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,14 +28,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.BO\\SeventhdGuard.BO.csproj": {
-                "projectPath": "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.BO\\SeventhdGuard.BO.csproj"
+              "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.BO\\SeventhdGuard.BO.csproj": {
+                "projectPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.BO\\SeventhdGuard.BO.csproj"
               },
-              "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.DAO\\SeventhdGuard.DAO.csproj": {
-                "projectPath": "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.DAO\\SeventhdGuard.DAO.csproj"
+              "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.DAO\\SeventhdGuard.DAO.csproj": {
+                "projectPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.DAO\\SeventhdGuard.DAO.csproj"
               },
-              "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj": {
-                "projectPath": "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj"
+              "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj": {
+                "projectPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj"
               }
             }
           }
@@ -77,14 +77,14 @@
         }
       }
     },
-    "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.BO\\SeventhdGuard.BO.csproj": {
+    "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.BO\\SeventhdGuard.BO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.BO\\SeventhdGuard.BO.csproj",
+        "projectUniqueName": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.BO\\SeventhdGuard.BO.csproj",
         "projectName": "SeventhdGuard.BO",
-        "projectPath": "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.BO\\SeventhdGuard.BO.csproj",
+        "projectPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.BO\\SeventhdGuard.BO.csproj",
         "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
-        "outputPath": "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.BO\\obj\\",
+        "outputPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.BO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -101,11 +101,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.DAO\\SeventhdGuard.DAO.csproj": {
-                "projectPath": "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.DAO\\SeventhdGuard.DAO.csproj"
+              "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.DAO\\SeventhdGuard.DAO.csproj": {
+                "projectPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.DAO\\SeventhdGuard.DAO.csproj"
               },
-              "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj": {
-                "projectPath": "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj"
+              "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj": {
+                "projectPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj"
               }
             }
           }
@@ -138,14 +138,14 @@
         }
       }
     },
-    "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.DAO\\SeventhdGuard.DAO.csproj": {
+    "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.DAO\\SeventhdGuard.DAO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.DAO\\SeventhdGuard.DAO.csproj",
+        "projectUniqueName": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.DAO\\SeventhdGuard.DAO.csproj",
         "projectName": "SeventhdGuard.DAO",
-        "projectPath": "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.DAO\\SeventhdGuard.DAO.csproj",
+        "projectPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.DAO\\SeventhdGuard.DAO.csproj",
         "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
-        "outputPath": "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.DAO\\obj\\",
+        "outputPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.DAO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -162,8 +162,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj": {
-                "projectPath": "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj"
+              "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj": {
+                "projectPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj"
               }
             }
           }
@@ -202,14 +202,14 @@
         }
       }
     },
-    "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj": {
+    "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj",
+        "projectUniqueName": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj",
         "projectName": "SeventhdGuard.ENTITY",
-        "projectPath": "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj",
+        "projectPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj",
         "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
-        "outputPath": "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\obj\\",
+        "outputPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config",

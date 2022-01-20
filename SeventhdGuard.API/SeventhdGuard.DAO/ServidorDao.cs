@@ -6,7 +6,7 @@ using System.Data;
 
 namespace SeventhdGuard.DAO
 {
-    public class ServidorDao : BaseDao<Servidor>, IBaseDao<Servidor>
+    public class ServidorDao : BaseDao<Servidor>, IServidorDao
     {
         #region "Constants"
 

@@ -6,9 +6,9 @@ using System;
 
 namespace SeventhdGuard.API.Controllers
 {
-    [Route("api/server")]
+    [Route("api/servers")]
     [ApiController]
-    public class ServidorController : ControllerBase, IBaseController<Servidor>
+    public partial class ServidorController : ControllerBase, IServidorController
     {
         #region "Variables"
 
@@ -25,7 +25,25 @@ namespace SeventhdGuard.API.Controllers
 
         #endregion
 
+        #region "Public Methods"
+
         #region "GET"
+
+        [HttpGet("Listar")]
+        public StatusCodeResult GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        [HttpGet]
+        public StatusCodeResult Get(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+
+        #region "POST"
 
         [HttpPost]
         public StatusCodeResult Add([FromBody] Servidor entity)
@@ -40,23 +58,17 @@ namespace SeventhdGuard.API.Controllers
             return BadRequest();
         }
 
+        #endregion
+
+        #region "DELETE"
+
         [HttpDelete("Remover")]
         public StatusCodeResult Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        [HttpGet("Listar")]
-        public StatusCodeResult GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        [HttpGet("Recuperar")]
-        public StatusCodeResult Get(int id)
-        {
-            throw new NotImplementedException();
-        }
+        #endregion
 
         #endregion
     }

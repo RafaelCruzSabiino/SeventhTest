@@ -10,3 +10,15 @@ C:\Git\SeventhdGuard.API\SeventhdGuard.ENTITY\obj\Debug\net5.0\SeventhdGuard.ENT
 C:\Git\SeventhdGuard.API\SeventhdGuard.ENTITY\obj\Debug\net5.0\SeventhdGuard.ENTITY.dll
 C:\Git\SeventhdGuard.API\SeventhdGuard.ENTITY\obj\Debug\net5.0\ref\SeventhdGuard.ENTITY.dll
 C:\Git\SeventhdGuard.API\SeventhdGuard.ENTITY\obj\Debug\net5.0\SeventhdGuard.ENTITY.pdb
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.ENTITY\bin\Debug\net5.0\SeventhdGuard.ENTITY.deps.json
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.ENTITY\bin\Debug\net5.0\SeventhdGuard.ENTITY.dll
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.ENTITY\bin\Debug\net5.0\ref\SeventhdGuard.ENTITY.dll
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.ENTITY\bin\Debug\net5.0\SeventhdGuard.ENTITY.pdb
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.ENTITY\obj\Debug\net5.0\SeventhdGuard.ENTITY.csproj.AssemblyReference.cache
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.ENTITY\obj\Debug\net5.0\SeventhdGuard.ENTITY.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.ENTITY\obj\Debug\net5.0\SeventhdGuard.ENTITY.AssemblyInfoInputs.cache
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.ENTITY\obj\Debug\net5.0\SeventhdGuard.ENTITY.AssemblyInfo.cs
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.ENTITY\obj\Debug\net5.0\SeventhdGuard.ENTITY.csproj.CoreCompileInputs.cache
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.ENTITY\obj\Debug\net5.0\SeventhdGuard.ENTITY.dll
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.ENTITY\obj\Debug\net5.0\ref\SeventhdGuard.ENTITY.dll
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.ENTITY\obj\Debug\net5.0\SeventhdGuard.ENTITY.pdb

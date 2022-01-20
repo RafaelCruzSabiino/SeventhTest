@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ucm6jQ/oi7/OI7c5t38MnBP0+scToQ4qqPIbxMkQ9V3CeaGgEHBTTpPMcdZw4EKxEgL8I9UZKIZIiHJCbxURLg==",
+  "dgSpecHash": "mrYdNhAILdZo4xnNkzNgoZ+MVNfiDaVsUHJvslpGaxAsQDoWUKU9eBKiLr4X3zlj/C89EyZmdDaB184yeC1zOw==",
   "success": true,
-  "projectFilePath": "C:\\Git\\SeventhdGuard.API\\SeventhdGuard.BO\\SeventhdGuard.BO.csproj",
+  "projectFilePath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.BO\\SeventhdGuard.BO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rafae\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\rafae\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",
