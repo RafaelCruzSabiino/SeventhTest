@@ -15,10 +15,10 @@ namespace SeventhdGuard.BO
         {
             try
             {
-                entity.Id     = new Guid().ToString();
-                resultInfo.Id = Dao.Add(entity);
+                entity.Id               = Guid.NewGuid().ToString();
+                resultInfo.RowsAffected = Dao.Add(entity);
 
-                if (resultInfo.Id <= 0)
+                if (resultInfo.RowsAffected <= 0)
                 {
                     throw new Exception("Erro ao inserir!");
                 }
@@ -50,11 +50,11 @@ namespace SeventhdGuard.BO
             return resultInfo;
         }
 
-        public ResultInfo Delete(int id)
+        public ResultInfo Delete(string serverId)
         {
             try
             {
-                resultInfo.RowsAffected = Dao.Delete(id);
+                resultInfo.RowsAffected = Dao.Delete(serverId);
 
                 if (resultInfo.RowsAffected <= 0)
                 {
@@ -69,11 +69,11 @@ namespace SeventhdGuard.BO
             return resultInfo;
         }
 
-        public ResultInfo<Servidor> Get(int id)
+        public ResultInfo<Servidor> Get(string serverId)
         {
             try
             {
-                resultInfoModel.Item = Dao.Get(id);
+                resultInfoModel.Item = Dao.Get(serverId);
             }
             catch (Exception ex)
             {

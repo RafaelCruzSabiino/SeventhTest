@@ -3,25 +3,23 @@ using SeventhdGuard.API.Interfaces;
 using SeventhdGuard.BO;
 using SeventhdGuard.ENTITY;
 
-using System.Net.NetworkInformation;
-
 namespace SeventhdGuard.API.Controllers
 {
     [Route("api/servers")]
     [ApiController]
-    public partial class ServidorController : ControllerBase, IServidorController
+    public class VideoController : ControllerBase, IVideoController
     {
         #region "Variables"
 
-        private ServidorBo? _servidorBo;
+        private VideoBo _videoBo;
 
         #endregion
 
         #region "Properties"
 
-        private ServidorBo ServidorBo
+        private VideoBo VideoBo
         {
-            get { return _servidorBo ?? (_servidorBo = new ServidorBo()); }
+            get { return _videoBo ?? (_videoBo = new VideoBo()); }
         }
 
         #endregion
@@ -30,23 +28,10 @@ namespace SeventhdGuard.API.Controllers
 
         #region "GET"
 
-        [HttpGet]
-        public ObjectResult GetAll()
+        [HttpGet("{serverId}/videos/{videoId}")]
+        public ObjectResult Get(string serverId, string videoId)
         {
-            var result = ServidorBo.GetAll();
-
-            if (result.Success)
-            {
-                return Ok(result.Items);
-            }
-
-            return BadRequest(result.Message);
-        }
-
-        [HttpGet("{serverId}")]
-        public ObjectResult Get(string serverId)
-        {
-            var result = ServidorBo.Get(serverId);
+            var result = VideoBo.Get(serverId, videoId);
 
             if (result.Success)
             {
@@ -56,20 +41,28 @@ namespace SeventhdGuard.API.Controllers
             return BadRequest(result.Message);
         }
 
-        [HttpGet("available/{serverId}")]
-        public bool ServerVerify(string serverId)
+        [HttpGet("{serverId}/videos")]
+        public ObjectResult GetVideoByServer(string serverId)
         {
-            return false;
+            var result = VideoBo.GetVideoByServer(serverId);
+
+            if (result.Success) 
+            {
+                return Ok(result.Items);
+            }
+
+            return BadRequest(result.Message);
         }
 
         #endregion
 
         #region "POST"
 
-        [HttpPost]
-        public ObjectResult Add([FromBody] Servidor entity)
+        [HttpPost("{serverId}/videos")]
+        public ObjectResult Add([FromBody] Video entity, string serverId)
         {
-            var result = ServidorBo.Add(entity);
+            entity.IdServer = serverId;
+            var result      = VideoBo.Add(entity);
 
             if (result.Success)
             {
@@ -83,10 +76,10 @@ namespace SeventhdGuard.API.Controllers
 
         #region "DELETE"
 
-        [HttpDelete("{serverId}")]
-        public ObjectResult Delete(string serverId)
+        [HttpDelete("{serverId}/videos/{videoId}")]
+        public ObjectResult Delete(string serverId, string videoId)
         {
-            var result = ServidorBo.Delete(serverId);
+            var result = VideoBo.Delete(serverId, videoId);
 
             if (result.Success) 
             {
@@ -98,6 +91,6 @@ namespace SeventhdGuard.API.Controllers
 
         #endregion
 
-        #endregion
+        #endregion      
     }
 }

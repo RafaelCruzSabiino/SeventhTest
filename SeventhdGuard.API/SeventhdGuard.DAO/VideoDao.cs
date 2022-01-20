@@ -12,12 +12,12 @@ namespace SeventhdGuard.DAO
 
         #region "Procedures"
 
-        private const string Sdg00020001 = "SP_SGD_0002_0001";
-        private const string Sdg00020002 = "SP_SGD_0002_0002";
-        private const string Sdg00020003 = "SP_SGD_0002_0003";
-        private const string Sdg00020004 = "SP_SGD_0002_0004";
-        private const string Sdg00020005 = "SP_SGD_0002_0005";
-        private const string Sdg00020006 = "SP_SGD_0002_0006";
+        private const string Sdg00020001 = "SP_SDG_0002_0001";
+        private const string Sdg00020002 = "SP_SDG_0002_0002";
+        private const string Sdg00020003 = "SP_SDG_0002_0003";
+        private const string Sdg00020004 = "SP_SDG_0002_0004";
+        private const string Sdg00020005 = "SP_SDG_0002_0005";
+        private const string Sdg00020006 = "SP_SDG_0002_0006";
 
         #endregion
 
@@ -25,6 +25,7 @@ namespace SeventhdGuard.DAO
 
         protected const string ParamIdServer    = "pID_SERVER";
         protected const string ParamDescription = "pDESCRIPTION";
+        protected const string ParamSizeInBytes = "pSIZEINBYTES";
 
         #endregion
 
@@ -36,6 +37,7 @@ namespace SeventhdGuard.DAO
         {
             DbNameToDtoName.Add("ID_SERVER", "IdServer");
             DbNameToDtoName.Add("DESCRIPTION", "Description");
+            DbNameToDtoName.Add("SIZEINBYTES", "SizeInBytes");
         }
 
         #endregion
@@ -52,11 +54,12 @@ namespace SeventhdGuard.DAO
                 cmd.CommandText    = Sdg00020001;
                 cmd.CommandTimeout = 0;
 
-                cmd.Parameters.AddWithValue(ParamId, entity.Id);
-                cmd.Parameters.AddWithValue(ParamIdServer, entity.IdServer);
+                cmd.Parameters.AddWithValue(ParamId,          entity.Id);
+                cmd.Parameters.AddWithValue(ParamIdServer,    entity.IdServer);
                 cmd.Parameters.AddWithValue(ParamDescription, entity.Description);
-                cmd.Parameters.AddWithValue(ParamDateAlter, entity.DateAlter);
-                cmd.Parameters.AddWithValue(ParamDateInsert, entity.DateInsert);
+                cmd.Parameters.AddWithValue(ParamSizeInBytes, entity.SizeInBytes);
+                cmd.Parameters.AddWithValue(ParamDateAlter,   entity.DateAlter);
+                cmd.Parameters.AddWithValue(ParamDateInsert,  entity.DateInsert);
 
                 return ExecuteData(cmd);
             }
@@ -72,16 +75,17 @@ namespace SeventhdGuard.DAO
                 cmd.CommandText    = Sdg00020002;
                 cmd.CommandTimeout = 0;
 
-                cmd.Parameters.AddWithValue(ParamId, entity.Id);
-                cmd.Parameters.AddWithValue(ParamIdServer, entity.IdServer);
+                cmd.Parameters.AddWithValue(ParamId,          entity.Id);
+                cmd.Parameters.AddWithValue(ParamIdServer,    entity.IdServer);
                 cmd.Parameters.AddWithValue(ParamDescription, entity.Description);
-                cmd.Parameters.AddWithValue(ParamDateAlter, entity.DateAlter);
+                cmd.Parameters.AddWithValue(ParamSizeInBytes, entity.SizeInBytes);
+                cmd.Parameters.AddWithValue(ParamDateAlter,   entity.DateAlter);
 
                 return ExecuteData(cmd);
             }
         }
 
-        public int Delete(int id)
+        public int Delete(string serverId, string videoId)
         {
             Connect();
 
@@ -91,13 +95,14 @@ namespace SeventhdGuard.DAO
                 cmd.CommandText    = Sdg00020003;
                 cmd.CommandTimeout = 0;
 
-                cmd.Parameters.AddWithValue(ParamId, id);
+                cmd.Parameters.AddWithValue(ParamId,       videoId);
+                cmd.Parameters.AddWithValue(ParamIdServer, serverId);
 
                 return ExecuteData(cmd);
             }
         }
 
-        public Video Get(int id)
+        public Video Get(string serverId, string videoId)
         {
             Connect();
 
@@ -107,7 +112,8 @@ namespace SeventhdGuard.DAO
                 cmd.CommandText    = Sdg00020004;
                 cmd.CommandTimeout = 0;
 
-                cmd.Parameters.AddWithValue(ParamId, id);
+                cmd.Parameters.AddWithValue(ParamId,       videoId);
+                cmd.Parameters.AddWithValue(ParamIdServer, serverId);
 
                 return ExecuteDataReaderEntity(cmd);
             }
@@ -127,7 +133,7 @@ namespace SeventhdGuard.DAO
             }
         }
 
-        public IEnumerable<Video> GetVideoByServer(int idServer)
+        public IEnumerable<Video> GetVideoByServer(string idServer)
         {
             Connect();
 

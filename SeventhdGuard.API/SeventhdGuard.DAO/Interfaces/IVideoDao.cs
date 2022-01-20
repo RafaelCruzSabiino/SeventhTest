@@ -5,6 +5,8 @@ namespace SeventhdGuard.DAO.Interfaces
 {
     public interface IVideoDao : IBaseDao<Video>
     {
-        IEnumerable<Video> GetVideoByServer(int idServer);
+        int Delete(string serverId, string videoId);
+        Video Get(string serverId, string videoId);
+        IEnumerable<Video> GetVideoByServer(string idServer);
     }
 }

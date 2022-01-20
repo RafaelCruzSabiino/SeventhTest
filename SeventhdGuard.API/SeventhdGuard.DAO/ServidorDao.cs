@@ -12,11 +12,11 @@ namespace SeventhdGuard.DAO
 
         #region "Procedures"
 
-        private const string Sdg00010001 = "SP_SGD_0001_0001";
-        private const string Sdg00010002 = "SP_SGD_0001_0002";
-        private const string Sdg00010003 = "SP_SGD_0001_0003";
-        private const string Sdg00010004 = "SP_SGD_0001_0004";
-        private const string Sdg00010005 = "SP_SGD_0001_0005";
+        private const string Sdg00010001 = "SP_SDG_0001_0001";
+        private const string Sdg00010002 = "SP_SDG_0001_0002";
+        private const string Sdg00010003 = "SP_SDG_0001_0003";
+        private const string Sdg00010004 = "SP_SDG_0001_0004";
+        private const string Sdg00010005 = "SP_SDG_0001_0005";
 
         #endregion
 
@@ -53,11 +53,11 @@ namespace SeventhdGuard.DAO
                 cmd.CommandText    = Sdg00010001;
                 cmd.CommandTimeout = 0;
 
-                cmd.Parameters.AddWithValue(ParamId, entity.Id);
-                cmd.Parameters.AddWithValue(ParamName, entity.Name);
-                cmd.Parameters.AddWithValue(ParamIp, entity.Ip);
-                cmd.Parameters.AddWithValue(ParamPort, entity.Port);
-                cmd.Parameters.AddWithValue(ParamDateAlter, entity.DateAlter);
+                cmd.Parameters.AddWithValue(ParamId,         entity.Id);
+                cmd.Parameters.AddWithValue(ParamName,       entity.Name);
+                cmd.Parameters.AddWithValue(ParamIp,         entity.Ip);
+                cmd.Parameters.AddWithValue(ParamPort,       entity.Port);
+                cmd.Parameters.AddWithValue(ParamDateAlter,  entity.DateAlter);
                 cmd.Parameters.AddWithValue(ParamDateInsert, entity.DateInsert);
 
                 return ExecuteData(cmd);
@@ -74,17 +74,17 @@ namespace SeventhdGuard.DAO
                 cmd.CommandText    = Sdg00010002;
                 cmd.CommandTimeout = 0;
 
-                cmd.Parameters.AddWithValue(ParamId, entity.Id);
-                cmd.Parameters.AddWithValue(ParamName, entity.Name);
-                cmd.Parameters.AddWithValue(ParamIp, entity.Ip);
-                cmd.Parameters.AddWithValue(ParamPort, entity.Port);
+                cmd.Parameters.AddWithValue(ParamId,        entity.Id);
+                cmd.Parameters.AddWithValue(ParamName,      entity.Name);
+                cmd.Parameters.AddWithValue(ParamIp,        entity.Ip);
+                cmd.Parameters.AddWithValue(ParamPort,      entity.Port);
                 cmd.Parameters.AddWithValue(ParamDateAlter, entity.DateAlter);
 
                 return ExecuteData(cmd);
             }
         }
 
-        public int Delete(int id)
+        public int Delete(string serverId)
         {
             Connect();
 
@@ -94,13 +94,13 @@ namespace SeventhdGuard.DAO
                 cmd.CommandText    = Sdg00010003;
                 cmd.CommandTimeout = 0;
 
-                cmd.Parameters.AddWithValue(ParamId, id);
+                cmd.Parameters.AddWithValue(ParamId, serverId);
 
                 return ExecuteData(cmd);
             }
         }
 
-        public Servidor Get(int id)
+        public Servidor Get(string serverId)
         {
             Connect();
 
@@ -110,7 +110,7 @@ namespace SeventhdGuard.DAO
                 cmd.CommandText    = Sdg00010004;
                 cmd.CommandTimeout = 0;
 
-                cmd.Parameters.AddWithValue(ParamId, id);
+                cmd.Parameters.AddWithValue(ParamId, serverId);
 
                 return ExecuteDataReaderEntity(cmd);
             }

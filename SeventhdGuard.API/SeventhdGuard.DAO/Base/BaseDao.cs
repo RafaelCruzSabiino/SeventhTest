@@ -20,7 +20,6 @@ namespace SeventhdGuard.DAO.Base
 
         #region "Constants"
 
-        protected const string ParamReturnValue = "pRETURN_VALUE";
         protected const string ParamId          = "pID";
         protected const string ParamDateAlter   = "pDATE_ALTER";
         protected const string ParamDateInsert  = "pDATE_INSERT";
@@ -95,13 +94,13 @@ namespace SeventhdGuard.DAO.Base
 
             try
             {
-                int lastInsertId = (int)cmd.ExecuteScalar();
+                int result = Convert.ToInt32(cmd.ExecuteNonQuery());
 
                 Commit();
 
                 CloseConnection();
 
-                return lastInsertId;
+                return result;
             }
             catch (MySqlException ex) 
             {
@@ -109,11 +108,11 @@ namespace SeventhdGuard.DAO.Base
                 CloseConnection();
                 throw new Exception(ex.Message);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 RowBack();
                 CloseConnection();
-                throw new Exception("Erro na execução");
+                throw new Exception(ex.Message);
             }
         }
 

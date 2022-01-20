@@ -15,13 +15,22 @@ namespace SeventhdGuard.BO
         {
             try
             {
-                entity.Id     = new Guid().ToString();
-                resultInfo.Id = Dao.Add(entity);
+                var resultServer = new ServidorBo().Get(entity.IdServer);
 
-                if (resultInfo.Id <= 0)
+                if (resultServer.Item != null && !string.IsNullOrEmpty(resultServer.Item.Id))
                 {
-                    throw new Exception("Erro ao inserir");
+                    entity.Id               = Guid.NewGuid().ToString();
+                    resultInfo.RowsAffected = Dao.Add(entity);
+
+                    if (resultInfo.RowsAffected <= 0)
+                    {
+                        throw new Exception("Erro ao inserir");
+                    }
                 }
+                else 
+                {
+                    throw new Exception("Servidor não encontrado");
+                }                
             }
             catch (Exception ex)
             {
@@ -50,11 +59,11 @@ namespace SeventhdGuard.BO
             return resultInfo;
         }
 
-        public ResultInfo Delete(int id)
+        public ResultInfo Delete(string serverId, string videoId)
         {
             try
             {
-                resultInfo.RowsAffected = Dao.Delete(id);
+                resultInfo.RowsAffected = Dao.Delete(serverId, videoId);
 
                 if (resultInfo.RowsAffected <= 0)
                 {
@@ -69,11 +78,11 @@ namespace SeventhdGuard.BO
             return resultInfo;
         }
 
-        public ResultInfo<Video> Get(int id)
+        public ResultInfo<Video> Get(string serverId, string videoId)
         {
             try
             {
-                resultInfoModel.Item = Dao.Get(id);
+                resultInfoModel.Item = Dao.Get(serverId, videoId);
             }
             catch (Exception ex)
             {
@@ -97,7 +106,7 @@ namespace SeventhdGuard.BO
             return resultInfoModel;
         }
 
-        public ResultInfo<Video> GetVideoByServer(int idServer)
+        public ResultInfo<Video> GetVideoByServer(string idServer)
         {
             try
             {
