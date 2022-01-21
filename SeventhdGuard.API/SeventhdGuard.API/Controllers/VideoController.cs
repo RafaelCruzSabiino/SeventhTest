@@ -2,6 +2,7 @@
 using SeventhdGuard.API.Interfaces;
 using SeventhdGuard.BO;
 using SeventhdGuard.ENTITY;
+using System;
 
 namespace SeventhdGuard.API.Controllers
 {
@@ -61,8 +62,11 @@ namespace SeventhdGuard.API.Controllers
         [HttpPost("{serverId}/videos")]
         public ObjectResult Add([FromBody] Video entity, string serverId)
         {
-            entity.IdServer = serverId;
-            var result      = VideoBo.Add(entity);
+            entity.Id          = Guid.NewGuid().ToString();
+            entity.IdServer    = serverId;
+            entity.SizeInBytes = System.Convert.FromBase64String(entity.Arquivo).Length;
+
+            var result = VideoBo.Add(entity);
 
             if (result.Success)
             {

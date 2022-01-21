@@ -13,15 +13,14 @@ namespace SeventhdGuard.BO
 
         public ResultInfo Add(Video entity)
         {
+            ResultInfo resultInfo = new ResultInfo();
+
             try
             {
                 var resultServer = new ServidorBo().Get(entity.IdServer);
 
                 if (resultServer.Item != null && !string.IsNullOrEmpty(resultServer.Item.Id))
-                {
-                    entity.Id          = Guid.NewGuid().ToString();
-                    entity.SizeInBytes = System.Convert.FromBase64String(entity.Arquivo).Length;
-
+                {                   
                     resultInfo.RowsAffected = Dao.Add(entity);
 
                     if (resultInfo.RowsAffected <= 0)
@@ -36,7 +35,7 @@ namespace SeventhdGuard.BO
             }
             catch (Exception ex)
             {
-                ExceptionMapper(ex);
+                resultInfo.ExceptionMapper(ex);
             }
 
             return resultInfo;
@@ -44,6 +43,8 @@ namespace SeventhdGuard.BO
 
         public ResultInfo Update(Video entity)
         {
+            ResultInfo resultInfo = new ResultInfo();
+
             try
             {
                 resultInfo.RowsAffected = Dao.Update(entity);
@@ -55,7 +56,7 @@ namespace SeventhdGuard.BO
             }
             catch (Exception ex)
             {
-                ExceptionMapper(ex);
+                resultInfo.ExceptionMapper(ex);
             }
 
             return resultInfo;
@@ -63,6 +64,8 @@ namespace SeventhdGuard.BO
 
         public ResultInfo Delete(string serverId, string videoId)
         {
+            ResultInfo resultInfo = new ResultInfo();
+
             try
             {
                 resultInfo.RowsAffected = Dao.Delete(serverId, videoId);
@@ -74,7 +77,7 @@ namespace SeventhdGuard.BO
             }
             catch (Exception ex)
             {
-                ExceptionMapper(ex);
+                resultInfo.ExceptionMapper(ex);
             }
 
             return resultInfo;
@@ -82,44 +85,50 @@ namespace SeventhdGuard.BO
 
         public ResultInfo<Video> Get(string serverId, string videoId)
         {
+            ResultInfo<Video> resultInfo = new ResultInfo<Video>();
+
             try
             {
-                resultInfoModel.Item = Dao.Get(serverId, videoId);
+                resultInfo.Item = Dao.Get(serverId, videoId);
             }
             catch (Exception ex)
             {
-                ExceptionMapperModel(ex);
+                resultInfo.ExceptionMapper(ex);
             }
 
-            return resultInfoModel;
+            return resultInfo;
         }
 
         public ResultInfo<Video> GetAll()
         {
+            ResultInfo<Video> resultInfo = new ResultInfo<Video>();
+
             try
             {
-                resultInfoModel.Items = Dao.GetAll();
+                resultInfo.Items = Dao.GetAll();
             }
             catch (Exception ex)
             {
-                ExceptionMapperModel(ex);
+                resultInfo.ExceptionMapper(ex);
             }
 
-            return resultInfoModel;
+            return resultInfo;
         }
 
         public ResultInfo<Video> GetVideoByServer(string idServer)
         {
+            ResultInfo<Video> resultInfo = new ResultInfo<Video>();
+
             try
             {
-                resultInfoModel.Items = Dao.GetVideoByServer(idServer);
+                resultInfo.Items = Dao.GetVideoByServer(idServer);
             }
             catch (Exception ex)
             {
-                ExceptionMapperModel(ex);
+                resultInfo.ExceptionMapper(ex);
             }
 
-            return resultInfoModel;
+            return resultInfo;
         }
 
         #endregion

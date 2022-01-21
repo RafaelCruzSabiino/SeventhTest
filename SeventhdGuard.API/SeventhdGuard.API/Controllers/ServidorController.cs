@@ -2,8 +2,7 @@
 using SeventhdGuard.API.Interfaces;
 using SeventhdGuard.BO;
 using SeventhdGuard.ENTITY;
-
-using System.Net.NetworkInformation;
+using System;
 
 namespace SeventhdGuard.API.Controllers
 {
@@ -76,6 +75,8 @@ namespace SeventhdGuard.API.Controllers
         [HttpPost]
         public ObjectResult Add([FromBody] Servidor entity)
         {
+            entity.Id = Guid.NewGuid().ToString();
+            
             var result = ServidorBo.Add(entity);
 
             if (result.Success)

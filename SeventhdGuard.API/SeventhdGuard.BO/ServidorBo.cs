@@ -13,9 +13,10 @@ namespace SeventhdGuard.BO
 
         public ResultInfo Add(Servidor entity)
         {
+            ResultInfo resultInfo = new ResultInfo();
+
             try
             {
-                entity.Id               = Guid.NewGuid().ToString();
                 resultInfo.RowsAffected = Dao.Add(entity);
 
                 if (resultInfo.RowsAffected <= 0)
@@ -25,7 +26,7 @@ namespace SeventhdGuard.BO
             }
             catch (Exception ex)
             {
-                ExceptionMapper(ex);
+                resultInfo.ExceptionMapper(ex);
             }
 
             return resultInfo;
@@ -33,6 +34,8 @@ namespace SeventhdGuard.BO
 
         public ResultInfo Update(Servidor entity)
         {
+            ResultInfo resultInfo = new ResultInfo();
+
             try
             {
                 resultInfo.RowsAffected = Dao.Update(entity);
@@ -44,7 +47,7 @@ namespace SeventhdGuard.BO
             }
             catch (Exception ex)
             {
-                ExceptionMapper(ex);
+                resultInfo.ExceptionMapper(ex);
             }
 
             return resultInfo;
@@ -52,6 +55,8 @@ namespace SeventhdGuard.BO
 
         public ResultInfo Delete(string serverId)
         {
+            ResultInfo resultInfo = new ResultInfo();
+
             try
             {
                 resultInfo.RowsAffected = Dao.Delete(serverId);
@@ -63,7 +68,7 @@ namespace SeventhdGuard.BO
             }
             catch (Exception ex)
             {
-                ExceptionMapper(ex);
+                resultInfo.ExceptionMapper(ex);
             }
 
             return resultInfo;
@@ -71,33 +76,36 @@ namespace SeventhdGuard.BO
 
         public ResultInfo<Servidor> Get(string serverId)
         {
+            ResultInfo<Servidor> resultInfo = new ResultInfo<Servidor>();
+
             try
             {
-                resultInfoModel.Item = Dao.Get(serverId);
+                resultInfo.Item = Dao.Get(serverId);
             }
             catch (Exception ex)
             {
-                ExceptionMapperModel(ex);
+                resultInfo.ExceptionMapper(ex);
             }
 
-            return resultInfoModel;
+            return resultInfo;
         }
 
         public ResultInfo<Servidor> GetAll()
         {
+            ResultInfo<Servidor> resultInfo = new ResultInfo<Servidor>();
+
             try
             {
-                resultInfoModel.Items = Dao.GetAll();
+                resultInfo.Items = Dao.GetAll();
             }
             catch (Exception ex)
             {
-                ExceptionMapperModel(ex);
+                resultInfo.ExceptionMapper(ex);
             }
 
-            return resultInfoModel;
+            return resultInfo;
         }
 
         #endregion
-
     }
 }

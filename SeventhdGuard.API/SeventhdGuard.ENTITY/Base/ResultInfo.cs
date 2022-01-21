@@ -22,6 +22,17 @@ namespace SeventhdGuard.ENTITY.Base
         }
 
         #endregion
+
+        #region "Public Methods"
+
+        public void ExceptionMapper(Exception ex)
+        {
+            Exception = ex;
+            Message   = ex.Message;
+            Success   = false;
+        }
+
+        #endregion
     }
 
     public partial class ResultInfo<TEntity> : ResultInfo
