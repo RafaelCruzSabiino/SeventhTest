@@ -24,8 +24,8 @@ namespace SeventhdGuard.BO.Base
         protected BaseBo()
         {
             resultInfoModel = new ResultInfo<TEntity>();
-            resultInfo = new ResultInfo();
-            Dao = new TDao();
+            resultInfo      = new ResultInfo();
+            Dao             = new TDao();
         }
 
         #endregion

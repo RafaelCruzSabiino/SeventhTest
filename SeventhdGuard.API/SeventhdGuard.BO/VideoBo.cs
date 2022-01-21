@@ -19,7 +19,9 @@ namespace SeventhdGuard.BO
 
                 if (resultServer.Item != null && !string.IsNullOrEmpty(resultServer.Item.Id))
                 {
-                    entity.Id               = Guid.NewGuid().ToString();
+                    entity.Id          = Guid.NewGuid().ToString();
+                    entity.SizeInBytes = System.Convert.FromBase64String(entity.Arquivo).Length;
+
                     resultInfo.RowsAffected = Dao.Add(entity);
 
                     if (resultInfo.RowsAffected <= 0)
