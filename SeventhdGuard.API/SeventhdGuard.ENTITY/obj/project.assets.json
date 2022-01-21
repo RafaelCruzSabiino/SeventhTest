@@ -8,7 +8,7 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\rafae\\.nuget\\packages\\": {}
+    "C:\\Users\\rafael.sabino\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -16,11 +16,11 @@
       "projectUniqueName": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj",
       "projectName": "SeventhdGuard.ENTITY",
       "projectPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj",
-      "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\rafael.sabino\\.nuget\\packages\\",
       "outputPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rafael.sabino\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
