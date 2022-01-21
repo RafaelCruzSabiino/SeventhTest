@@ -11,6 +11,7 @@ namespace SeventhdGuard.ENTITY
         public string IdServer    { get; set; }
         public string Description { get; set; }
         public int    SizeInBytes { get; set; }
+        public byte[] Arquivo     { get; set; }
 
         #endregion
     }

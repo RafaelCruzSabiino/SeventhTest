@@ -57,7 +57,7 @@ namespace SeventhdGuard.API.Controllers
         }
 
         [HttpGet("available/{serverId}")]
-        public StatusCodeResult ServerVerify(string serverId)
+        public StatusCodeResult VerifyServer(string serverId)
         {
             var result = ServidorBo.Get(serverId);
 
