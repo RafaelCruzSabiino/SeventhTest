@@ -146,9 +146,6 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.COMMON\\SeventhdGuard.COMMON.csproj": {
-                "projectPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.COMMON\\SeventhdGuard.COMMON.csproj"
-              },
               "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj": {
                 "projectPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj"
               }

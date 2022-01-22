@@ -9,3 +9,4 @@ C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.COMMON\obj\Debug\net5.0\Seven
 C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.COMMON\obj\Debug\net5.0\SeventhdGuard.COMMON.dll
 C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.COMMON\obj\Debug\net5.0\ref\SeventhdGuard.COMMON.dll
 C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.COMMON\obj\Debug\net5.0\SeventhdGuard.COMMON.pdb
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.COMMON\obj\Debug\net5.0\SeventhdGuard.COMMON.csproj.AssemblyReference.cache

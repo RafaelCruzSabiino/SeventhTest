@@ -12,7 +12,8 @@ namespace SeventhdGuard.COMMON
         {
             try
             {
-                if (Directory.Exists(path)) 
+                path = "C:\\Testes"; // remover
+                if (Directory.Exists(path))
                 {
                     File.Delete(string.Format("{0}\\{1}", path, nameWithExtension));
 
@@ -34,6 +35,7 @@ namespace SeventhdGuard.COMMON
         {
             try
             {
+                path = "C:\\Testes"; // remover
                 if (Directory.Exists(path)) 
                 {
                     var arquivo = File.ReadAllBytes(string.Format("{0}\\{1}", path, nameWithExtension));
@@ -52,9 +54,27 @@ namespace SeventhdGuard.COMMON
             }
         }
 
-        public bool Upload(string path, string name, byte[] file)
+        public bool Upload(string path, string nameWithExtension, byte[] file)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                path = "C:\\Testes"; // remover
+                if (Directory.Exists(path))
+                {
+                    File.WriteAllBytes(string.Format("{0}\\{1}", path, nameWithExtension), file);
+
+                    if (Get(path, nameWithExtension) != null)
+                    {
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+            catch 
+            {
+                return false;
+            }
         }
 
         #endregion

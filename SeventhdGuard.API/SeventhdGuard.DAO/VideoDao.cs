@@ -13,7 +13,6 @@ namespace SeventhdGuard.DAO
         #region "Procedures"
 
         private const string Sdg00020001 = "SP_SDG_0002_0001";
-        private const string Sdg00020002 = "SP_SDG_0002_0002";
         private const string Sdg00020003 = "SP_SDG_0002_0003";
         private const string Sdg00020004 = "SP_SDG_0002_0004";
         private const string Sdg00020005 = "SP_SDG_0002_0005";
@@ -50,16 +49,16 @@ namespace SeventhdGuard.DAO
 
             using (var cmd = objConnection.CreateCommand())
             {
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = Sdg00020001;
+                cmd.CommandType    = CommandType.StoredProcedure;
+                cmd.CommandText    = Sdg00020001;
                 cmd.CommandTimeout = 0;
 
-                cmd.Parameters.AddWithValue(ParamId, entity.Id);
-                cmd.Parameters.AddWithValue(ParamIdServer, entity.IdServer);
+                cmd.Parameters.AddWithValue(ParamId,          entity.Id);
+                cmd.Parameters.AddWithValue(ParamIdServer,    entity.IdServer);
                 cmd.Parameters.AddWithValue(ParamDescription, entity.Description);
                 cmd.Parameters.AddWithValue(ParamSizeInBytes, entity.SizeInBytes);
-                cmd.Parameters.AddWithValue(ParamDateAlter, entity.DateAlter);
-                cmd.Parameters.AddWithValue(ParamDateInsert, entity.DateInsert);
+                cmd.Parameters.AddWithValue(ParamDateAlter,   entity.DateAlter);
+                cmd.Parameters.AddWithValue(ParamDateInsert,  entity.DateInsert);
 
                 return ExecuteData(cmd);
             }

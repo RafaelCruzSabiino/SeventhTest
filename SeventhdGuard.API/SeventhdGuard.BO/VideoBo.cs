@@ -22,7 +22,14 @@ namespace SeventhdGuard.BO
                 var resultServer = new ServidorBo().Get(entity.IdServer);
 
                 if (resultServer.Item != null && !string.IsNullOrEmpty(resultServer.Item.Id))
-                {                   
+                {
+                    var upload = new Arquivo().Upload(string.Format("\\{0}", resultServer.Item.Ip), string.Format("{0}.mp4", entity.Id), System.Convert.FromBase64String(entity.Arquivo));
+
+                    if (!upload) 
+                    {
+                        throw new Exception("Erro ao inserir arquivo");
+                    }
+
                     resultInfo.RowsAffected = Dao.Add(entity);
 
                     if (resultInfo.RowsAffected <= 0)
@@ -49,7 +56,7 @@ namespace SeventhdGuard.BO
 
             try
             {
-                if (!new Arquivo().Delete(string.Format("\\{0}", serverId), string.Format("{0}.mp4", videoId)))
+                if (!new Arquivo().Delete(string.Format("\\{0}", new ServidorBo().Get(serverId).Item.Ip), string.Format("{0}.mp4", videoId)))
                 {
                     throw new Exception("Erro ao deletar arquivo!");
                 }
@@ -75,8 +82,14 @@ namespace SeventhdGuard.BO
 
             try
             {
-                resultInfo.Item         = Dao.Get(serverId, videoId);
-                resultInfo.Item.Arquivo = System.Convert.ToBase64String(new Arquivo().Get(string.Format("\\{0}", serverId), string.Format("{0}.mp4", videoId)));
+                resultInfo.Item = Dao.Get(serverId, videoId);
+
+                var arquivo = new Arquivo().Get(string.Format("\\{0}", new ServidorBo().Get(serverId).Item.Ip), string.Format("{0}.mp4", videoId));
+
+                if (arquivo != null)
+                {
+                    resultInfo.Item.Arquivo = System.Convert.ToBase64String(arquivo);
+                }                    
             }
             catch (Exception ex)
             {
@@ -98,7 +111,12 @@ namespace SeventhdGuard.BO
                 {
                     foreach (var video in resultInfo.Items) 
                     {
-                        video.Arquivo = System.Convert.ToBase64String(new Arquivo().Get(string.Format("\\{0}", video.IdServer), string.Format("{0}.mp4", video.Id)));
+                        var arquivo = new Arquivo().Get(string.Format("\\{0}", new ServidorBo().Get(video.IdServer).Item.Ip), string.Format("{0}.mp4", video.Id));
+
+                        if (arquivo != null) 
+                        {
+                            video.Arquivo = System.Convert.ToBase64String(arquivo);
+                        }                        
                     }
                 }                
             }
@@ -122,7 +140,12 @@ namespace SeventhdGuard.BO
                 {
                     foreach (var video in resultInfo.Items)
                     {
-                        video.Arquivo = System.Convert.ToBase64String(new Arquivo().Get(string.Format("\\{0}", video.IdServer), string.Format("{0}.mp4", video.Id)));
+                        var arquivo = new Arquivo().Get(string.Format("\\{0}", new ServidorBo().Get(video.IdServer).Item.Ip), string.Format("{0}.mp4", video.Id));
+
+                        if (arquivo != null) 
+                        {
+                            video.Arquivo = System.Convert.ToBase64String(arquivo);
+                        }
                     }
                 }
             }

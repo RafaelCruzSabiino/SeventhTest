@@ -59,7 +59,7 @@ namespace SeventhdGuard.API.Controllers
         [HttpGet("{serverId}/videos/{videoId}/binary")]
         public ObjectResult Binary(string serverId, string videoId)
         {
-            var result = new Arquivo().Get(string.Format("\\{0}", serverId), string.Format("{0}.mp4", videoId));
+            var result = new Arquivo().Get(string.Format("\\{0}", new ServidorBo().Get(serverId).Item.Ip), string.Format("{0}.mp4", videoId));
 
             if (result != null)
             {
