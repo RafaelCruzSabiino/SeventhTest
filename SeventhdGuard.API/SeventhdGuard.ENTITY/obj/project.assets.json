@@ -1,14 +1,33 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "SeventhdGuard.COMMON/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/SeventhdGuard.COMMON.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SeventhdGuard.COMMON.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "SeventhdGuard.COMMON/1.0.0": {
+      "type": "project",
+      "path": "../SeventhdGuard.COMMON/SeventhdGuard.COMMON.csproj",
+      "msbuildProject": "../SeventhdGuard.COMMON/SeventhdGuard.COMMON.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "SeventhdGuard.COMMON >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\rafael.sabino\\.nuget\\packages\\": {}
+    "C:\\Users\\rafae\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -16,11 +35,11 @@
       "projectUniqueName": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj",
       "projectName": "SeventhdGuard.ENTITY",
       "projectPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\SeventhdGuard.ENTITY.csproj",
-      "packagesPath": "C:\\Users\\rafael.sabino\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
       "outputPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.ENTITY\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rafael.sabino\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -33,7 +52,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.COMMON\\SeventhdGuard.COMMON.csproj": {
+              "projectPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.COMMON\\SeventhdGuard.COMMON.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

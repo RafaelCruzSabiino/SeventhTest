@@ -90,3 +90,5 @@ C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.API\obj\Debug\net5.0\Seventhd
 C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.API\obj\Debug\net5.0\ref\SeventhdGuard.API.dll
 C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.API\obj\Debug\net5.0\SeventhdGuard.API.pdb
 C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.API\obj\Debug\net5.0\SeventhdGuard.API.genruntimeconfig.cache
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.API\bin\Debug\net5.0\SeventhdGuard.COMMON.dll
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.API\bin\Debug\net5.0\SeventhdGuard.COMMON.pdb

@@ -64,7 +64,7 @@ namespace SeventhdGuard.DAO
             }
         }
 
-        public int Update(Servidor entity)
+        public int Update(Servidor entity, string serverId)
         {
             Connect();
 
@@ -74,7 +74,7 @@ namespace SeventhdGuard.DAO
                 cmd.CommandText    = Sdg00010002;
                 cmd.CommandTimeout = 0;
 
-                cmd.Parameters.AddWithValue(ParamId,        entity.Id);
+                cmd.Parameters.AddWithValue(ParamId,        serverId);
                 cmd.Parameters.AddWithValue(ParamName,      entity.Name);
                 cmd.Parameters.AddWithValue(ParamIp,        entity.Ip);
                 cmd.Parameters.AddWithValue(ParamPort,      entity.Port);

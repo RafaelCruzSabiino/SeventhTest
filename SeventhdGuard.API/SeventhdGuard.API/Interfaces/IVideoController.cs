@@ -9,5 +9,6 @@ namespace SeventhdGuard.API.Interfaces
         ObjectResult Delete(string serverId, string videoId);
         ObjectResult Get(string serverId, string videoId);
         ObjectResult GetVideoByServer(string serverId);
+        ObjectResult Binary(string serverId, string videoId);
     }
 }

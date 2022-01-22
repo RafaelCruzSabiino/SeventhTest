@@ -1,0 +1,11 @@
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.COMMON\bin\Debug\net5.0\SeventhdGuard.COMMON.deps.json
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.COMMON\bin\Debug\net5.0\SeventhdGuard.COMMON.dll
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.COMMON\bin\Debug\net5.0\ref\SeventhdGuard.COMMON.dll
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.COMMON\bin\Debug\net5.0\SeventhdGuard.COMMON.pdb
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.COMMON\obj\Debug\net5.0\SeventhdGuard.COMMON.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.COMMON\obj\Debug\net5.0\SeventhdGuard.COMMON.AssemblyInfoInputs.cache
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.COMMON\obj\Debug\net5.0\SeventhdGuard.COMMON.AssemblyInfo.cs
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.COMMON\obj\Debug\net5.0\SeventhdGuard.COMMON.csproj.CoreCompileInputs.cache
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.COMMON\obj\Debug\net5.0\SeventhdGuard.COMMON.dll
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.COMMON\obj\Debug\net5.0\ref\SeventhdGuard.COMMON.dll
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.COMMON\obj\Debug\net5.0\SeventhdGuard.COMMON.pdb

@@ -28,3 +28,5 @@ C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.DAO\obj\Debug\net5.0\Seventhd
 C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.DAO\obj\Debug\net5.0\SeventhdGuard.DAO.dll
 C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.DAO\obj\Debug\net5.0\ref\SeventhdGuard.DAO.dll
 C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.DAO\obj\Debug\net5.0\SeventhdGuard.DAO.pdb
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.DAO\bin\Debug\net5.0\SeventhdGuard.COMMON.dll
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.DAO\bin\Debug\net5.0\SeventhdGuard.COMMON.pdb

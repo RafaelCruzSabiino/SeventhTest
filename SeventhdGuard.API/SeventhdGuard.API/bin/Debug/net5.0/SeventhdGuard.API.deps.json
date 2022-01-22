@@ -34,6 +34,7 @@
       "SeventhdGuard.API/1.0.0": {
         "dependencies": {
           "SeventhdGuard.BO": "1.0.0",
+          "SeventhdGuard.COMMON": "1.0.0",
           "SeventhdGuard.DAO": "1.0.0",
           "SeventhdGuard.ENTITY": "1.0.0",
           "Swashbuckle.AspNetCore": "5.6.3",
@@ -561,6 +562,7 @@
       },
       "SeventhdGuard.BO/1.0.0": {
         "dependencies": {
+          "SeventhdGuard.COMMON": "1.0.0",
           "SeventhdGuard.DAO": "1.0.0",
           "SeventhdGuard.ENTITY": "1.0.0"
         },
@@ -571,9 +573,18 @@
           "SeventhdGuard.BO.dll": {}
         }
       },
+      "SeventhdGuard.COMMON/1.0.0": {
+        "runtime": {
+          "SeventhdGuard.COMMON.dll": {}
+        },
+        "compile": {
+          "SeventhdGuard.COMMON.dll": {}
+        }
+      },
       "SeventhdGuard.DAO/1.0.0": {
         "dependencies": {
           "MySql.Data": "8.0.27",
+          "SeventhdGuard.COMMON": "1.0.0",
           "SeventhdGuard.ENTITY": "1.0.0"
         },
         "runtime": {
@@ -584,6 +595,9 @@
         }
       },
       "SeventhdGuard.ENTITY/1.0.0": {
+        "dependencies": {
+          "SeventhdGuard.COMMON": "1.0.0"
+        },
         "runtime": {
           "SeventhdGuard.ENTITY.dll": {}
         },
@@ -2473,6 +2487,11 @@
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
     "SeventhdGuard.BO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SeventhdGuard.COMMON/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

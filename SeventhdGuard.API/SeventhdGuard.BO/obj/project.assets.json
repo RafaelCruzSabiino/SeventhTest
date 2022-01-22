@@ -275,11 +275,22 @@
           }
         }
       },
+      "SeventhdGuard.COMMON/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/SeventhdGuard.COMMON.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SeventhdGuard.COMMON.dll": {}
+        }
+      },
       "SeventhdGuard.DAO/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "MySql.Data": "8.0.27",
+          "SeventhdGuard.COMMON": "1.0.0",
           "SeventhdGuard.ENTITY": "1.0.0"
         },
         "compile": {
@@ -292,6 +303,9 @@
       "SeventhdGuard.ENTITY/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "SeventhdGuard.COMMON": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/SeventhdGuard.ENTITY.dll": {}
         },
@@ -866,6 +880,11 @@
         "version.txt"
       ]
     },
+    "SeventhdGuard.COMMON/1.0.0": {
+      "type": "project",
+      "path": "../SeventhdGuard.COMMON/SeventhdGuard.COMMON.csproj",
+      "msbuildProject": "../SeventhdGuard.COMMON/SeventhdGuard.COMMON.csproj"
+    },
     "SeventhdGuard.DAO/1.0.0": {
       "type": "project",
       "path": "../SeventhdGuard.DAO/SeventhdGuard.DAO.csproj",
@@ -879,12 +898,13 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "SeventhdGuard.COMMON >= 1.0.0",
       "SeventhdGuard.DAO >= 1.0.0",
       "SeventhdGuard.ENTITY >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rafael.sabino\\.nuget\\packages\\": {}
+    "C:\\Users\\rafae\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -892,11 +912,11 @@
       "projectUniqueName": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.BO\\SeventhdGuard.BO.csproj",
       "projectName": "SeventhdGuard.BO",
       "projectPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.BO\\SeventhdGuard.BO.csproj",
-      "packagesPath": "C:\\Users\\rafael.sabino\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
       "outputPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.BO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rafael.sabino\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -910,6 +930,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.COMMON\\SeventhdGuard.COMMON.csproj": {
+              "projectPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.COMMON\\SeventhdGuard.COMMON.csproj"
+            },
             "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.DAO\\SeventhdGuard.DAO.csproj": {
               "projectPath": "C:\\Git\\SeventhTest\\SeventhdGuard.API\\SeventhdGuard.DAO\\SeventhdGuard.DAO.csproj"
             },

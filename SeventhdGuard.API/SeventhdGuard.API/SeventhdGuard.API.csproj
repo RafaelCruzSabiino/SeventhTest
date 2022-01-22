@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SeventhdGuard.BO\SeventhdGuard.BO.csproj" />
+    <ProjectReference Include="..\SeventhdGuard.COMMON\SeventhdGuard.COMMON.csproj" />
     <ProjectReference Include="..\SeventhdGuard.DAO\SeventhdGuard.DAO.csproj" />
     <ProjectReference Include="..\SeventhdGuard.ENTITY\SeventhdGuard.ENTITY.csproj" />
   </ItemGroup>

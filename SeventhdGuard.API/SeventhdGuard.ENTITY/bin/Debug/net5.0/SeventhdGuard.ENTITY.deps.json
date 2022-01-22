@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "SeventhdGuard.ENTITY/1.0.0": {
+        "dependencies": {
+          "SeventhdGuard.COMMON": "1.0.0"
+        },
         "runtime": {
           "SeventhdGuard.ENTITY.dll": {}
+        }
+      },
+      "SeventhdGuard.COMMON/1.0.0": {
+        "runtime": {
+          "SeventhdGuard.COMMON.dll": {}
         }
       }
     }
   },
   "libraries": {
     "SeventhdGuard.ENTITY/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SeventhdGuard.COMMON/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

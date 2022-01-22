@@ -50,36 +50,16 @@ namespace SeventhdGuard.DAO
 
             using (var cmd = objConnection.CreateCommand())
             {
-                cmd.CommandType    = CommandType.StoredProcedure;
-                cmd.CommandText    = Sdg00020001;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = Sdg00020001;
                 cmd.CommandTimeout = 0;
 
-                cmd.Parameters.AddWithValue(ParamId,          entity.Id);
-                cmd.Parameters.AddWithValue(ParamIdServer,    entity.IdServer);
+                cmd.Parameters.AddWithValue(ParamId, entity.Id);
+                cmd.Parameters.AddWithValue(ParamIdServer, entity.IdServer);
                 cmd.Parameters.AddWithValue(ParamDescription, entity.Description);
                 cmd.Parameters.AddWithValue(ParamSizeInBytes, entity.SizeInBytes);
-                cmd.Parameters.AddWithValue(ParamDateAlter,   entity.DateAlter);
-                cmd.Parameters.AddWithValue(ParamDateInsert,  entity.DateInsert);
-
-                return ExecuteData(cmd);
-            }
-        }
-
-        public int Update(Video entity)
-        {
-            Connect();
-
-            using (var cmd = objConnection.CreateCommand())
-            {
-                cmd.CommandType    = CommandType.StoredProcedure;
-                cmd.CommandText    = Sdg00020002;
-                cmd.CommandTimeout = 0;
-
-                cmd.Parameters.AddWithValue(ParamId,          entity.Id);
-                cmd.Parameters.AddWithValue(ParamIdServer,    entity.IdServer);
-                cmd.Parameters.AddWithValue(ParamDescription, entity.Description);
-                cmd.Parameters.AddWithValue(ParamSizeInBytes, entity.SizeInBytes);
-                cmd.Parameters.AddWithValue(ParamDateAlter,   entity.DateAlter);
+                cmd.Parameters.AddWithValue(ParamDateAlter, entity.DateAlter);
+                cmd.Parameters.AddWithValue(ParamDateInsert, entity.DateInsert);
 
                 return ExecuteData(cmd);
             }

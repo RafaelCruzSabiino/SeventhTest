@@ -22,3 +22,6 @@ C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.ENTITY\obj\Debug\net5.0\Seven
 C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.ENTITY\obj\Debug\net5.0\SeventhdGuard.ENTITY.dll
 C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.ENTITY\obj\Debug\net5.0\ref\SeventhdGuard.ENTITY.dll
 C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.ENTITY\obj\Debug\net5.0\SeventhdGuard.ENTITY.pdb
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.ENTITY\bin\Debug\net5.0\SeventhdGuard.COMMON.dll
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.ENTITY\bin\Debug\net5.0\SeventhdGuard.COMMON.pdb
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.ENTITY\obj\Debug\net5.0\SeventhdGuard.ENTITY.csproj.CopyComplete

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SeventhdGuard.API.Interfaces;
 using SeventhdGuard.BO;
+using SeventhdGuard.COMMON;
 using SeventhdGuard.ENTITY;
 using System;
 
@@ -53,6 +54,19 @@ namespace SeventhdGuard.API.Controllers
             }
 
             return BadRequest(result.Message);
+        }
+
+        [HttpGet("{serverId}/videos/{videoId}/binary")]
+        public ObjectResult Binary(string serverId, string videoId)
+        {
+            var result = new Arquivo().Get(string.Format("\\{0}", serverId), string.Format("{0}.mp4", videoId));
+
+            if (result != null)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest("Arquivo não encontrado!");
         }
 
         #endregion

@@ -1,9 +1,11 @@
 ﻿using SeventhdGuard.BO.Base;
 using SeventhdGuard.BO.Interfaces;
+using SeventhdGuard.COMMON;
 using SeventhdGuard.DAO;
 using SeventhdGuard.ENTITY;
 using SeventhdGuard.ENTITY.Base;
 using System;
+using System.Linq;
 
 namespace SeventhdGuard.BO
 {
@@ -39,28 +41,7 @@ namespace SeventhdGuard.BO
             }
 
             return resultInfo;
-        }
-
-        public ResultInfo Update(Video entity)
-        {
-            ResultInfo resultInfo = new ResultInfo();
-
-            try
-            {
-                resultInfo.RowsAffected = Dao.Update(entity);
-
-                if (resultInfo.RowsAffected <= 0)
-                {
-                    throw new Exception("Erro ao Alterar");
-                }
-            }
-            catch (Exception ex)
-            {
-                resultInfo.ExceptionMapper(ex);
-            }
-
-            return resultInfo;
-        }
+        }        
 
         public ResultInfo Delete(string serverId, string videoId)
         {
@@ -68,12 +49,17 @@ namespace SeventhdGuard.BO
 
             try
             {
+                if (!new Arquivo().Delete(string.Format("\\{0}", serverId), string.Format("{0}.mp4", videoId)))
+                {
+                    throw new Exception("Erro ao deletar arquivo!");
+                }
+
                 resultInfo.RowsAffected = Dao.Delete(serverId, videoId);
 
                 if (resultInfo.RowsAffected <= 0)
                 {
                     throw new Exception("Erro ao deletar!");
-                }
+                }                                
             }
             catch (Exception ex)
             {
@@ -89,7 +75,8 @@ namespace SeventhdGuard.BO
 
             try
             {
-                resultInfo.Item = Dao.Get(serverId, videoId);
+                resultInfo.Item         = Dao.Get(serverId, videoId);
+                resultInfo.Item.Arquivo = System.Convert.ToBase64String(new Arquivo().Get(string.Format("\\{0}", serverId), string.Format("{0}.mp4", videoId)));
             }
             catch (Exception ex)
             {
@@ -106,6 +93,14 @@ namespace SeventhdGuard.BO
             try
             {
                 resultInfo.Items = Dao.GetAll();
+
+                if (resultInfo.Items.Any()) 
+                {
+                    foreach (var video in resultInfo.Items) 
+                    {
+                        video.Arquivo = System.Convert.ToBase64String(new Arquivo().Get(string.Format("\\{0}", video.IdServer), string.Format("{0}.mp4", video.Id)));
+                    }
+                }                
             }
             catch (Exception ex)
             {
@@ -122,6 +117,14 @@ namespace SeventhdGuard.BO
             try
             {
                 resultInfo.Items = Dao.GetVideoByServer(idServer);
+
+                if (resultInfo.Items.Any())
+                {
+                    foreach (var video in resultInfo.Items)
+                    {
+                        video.Arquivo = System.Convert.ToBase64String(new Arquivo().Get(string.Format("\\{0}", video.IdServer), string.Format("{0}.mp4", video.Id)));
+                    }
+                }
             }
             catch (Exception ex)
             {

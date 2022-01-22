@@ -32,3 +32,5 @@ C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.BO\obj\Debug\net5.0\SeventhdG
 C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.BO\obj\Debug\net5.0\SeventhdGuard.BO.dll
 C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.BO\obj\Debug\net5.0\ref\SeventhdGuard.BO.dll
 C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.BO\obj\Debug\net5.0\SeventhdGuard.BO.pdb
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.BO\bin\Debug\net5.0\SeventhdGuard.COMMON.dll
+C:\Git\SeventhTest\SeventhdGuard.API\SeventhdGuard.BO\bin\Debug\net5.0\SeventhdGuard.COMMON.pdb

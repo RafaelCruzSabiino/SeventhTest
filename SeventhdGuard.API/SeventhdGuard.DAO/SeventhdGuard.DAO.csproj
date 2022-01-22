@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SeventhdGuard.COMMON\SeventhdGuard.COMMON.csproj" />
     <ProjectReference Include="..\SeventhdGuard.ENTITY\SeventhdGuard.ENTITY.csproj" />
   </ItemGroup>
 

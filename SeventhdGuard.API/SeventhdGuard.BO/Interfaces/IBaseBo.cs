@@ -4,8 +4,7 @@ namespace SeventhdGuard.BO.Interfaces
 {
     public interface IBaseBo<TEntity>
     {
-        ResultInfo Add(TEntity entity);
-        ResultInfo Update(TEntity entity);        
+        ResultInfo Add(TEntity entity);     
         ResultInfo<TEntity> GetAll();
     }
 }

@@ -106,6 +106,23 @@ namespace SeventhdGuard.API.Controllers
 
         #endregion
 
+        #region "PUT"
+
+        [HttpPut("{serverId}")]
+        public ObjectResult Update([FromBody] Servidor entity, string serverId) 
+        {
+            var result = ServidorBo.Update(entity, serverId);
+
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result.Message);
+        }
+
+        #endregion
+
         #endregion
     }
 }

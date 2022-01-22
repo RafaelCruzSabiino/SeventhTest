@@ -32,13 +32,13 @@ namespace SeventhdGuard.BO
             return resultInfo;
         }
 
-        public ResultInfo Update(Servidor entity)
+        public ResultInfo Update(Servidor entity, string serverId)
         {
             ResultInfo resultInfo = new ResultInfo();
 
             try
             {
-                resultInfo.RowsAffected = Dao.Update(entity);
+                resultInfo.RowsAffected = Dao.Update(entity, serverId);
 
                 if (resultInfo.RowsAffected <= 0)
                 {

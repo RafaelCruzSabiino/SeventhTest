@@ -9,6 +9,7 @@
       "SeventhdGuard.DAO/1.0.0": {
         "dependencies": {
           "MySql.Data": "8.0.27",
+          "SeventhdGuard.COMMON": "1.0.0",
           "SeventhdGuard.ENTITY": "1.0.0"
         },
         "runtime": {
@@ -214,7 +215,15 @@
           }
         }
       },
+      "SeventhdGuard.COMMON/1.0.0": {
+        "runtime": {
+          "SeventhdGuard.COMMON.dll": {}
+        }
+      },
       "SeventhdGuard.ENTITY/1.0.0": {
+        "dependencies": {
+          "SeventhdGuard.COMMON": "1.0.0"
+        },
         "runtime": {
           "SeventhdGuard.ENTITY.dll": {}
         }
@@ -359,6 +368,11 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "SeventhdGuard.COMMON/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "SeventhdGuard.ENTITY/1.0.0": {
       "type": "project",
