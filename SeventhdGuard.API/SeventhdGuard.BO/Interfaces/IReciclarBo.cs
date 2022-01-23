@@ -7,8 +7,8 @@ namespace SeventhdGuard.BO.Interfaces
 {
     public interface IReciclarBo
     {
-        void RecyclerVideo(Reciclar entity, int days);
-        Task Process(Reciclar entity, int days);
+        Task<bool> RecyclerVideo(Reciclar entity, int days);
+        bool Process(Reciclar entity, int days);
         ResultInfo BeginProcess(Reciclar entity);
         ResultInfo EndProcess(string id, DateTime dataFinished);
         ResultInfo<Reciclar> Verify();

@@ -14,12 +14,12 @@ namespace SeventhdGuard.BO
     {
         #region "Public Methods"
 
-        public async void RecyclerVideo(Reciclar entity, int days)
+        public async Task<bool> RecyclerVideo(Reciclar entity, int days)
         {
-            await Process(entity, days);
+            return await Task<bool>.FromResult(Process(entity, days));
         }
 
-        public Task Process(Reciclar entity, int days)
+        public bool Process(Reciclar entity, int days)
         {
             if (string.IsNullOrEmpty(Verify().Item.Id))
             {
@@ -42,7 +42,7 @@ namespace SeventhdGuard.BO
                 }
             }
 
-            return null;
+            return true;
         }
 
         public ResultInfo<Reciclar> Verify()
