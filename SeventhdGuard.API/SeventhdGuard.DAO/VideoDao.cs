@@ -1,6 +1,7 @@
 ﻿using SeventhdGuard.DAO.Base;
 using SeventhdGuard.DAO.Interfaces;
 using SeventhdGuard.ENTITY;
+using System;
 using System.Collections.Generic;
 using System.Data;
 
@@ -17,6 +18,7 @@ namespace SeventhdGuard.DAO
         private const string Sdg00020004 = "SP_SDG_0002_0004";
         private const string Sdg00020005 = "SP_SDG_0002_0005";
         private const string Sdg00020006 = "SP_SDG_0002_0006";
+        private const string Sdg00020007 = "SP_SDG_0002_0007";
 
         #endregion
 
@@ -25,6 +27,7 @@ namespace SeventhdGuard.DAO
         protected const string ParamIdServer    = "pID_SERVER";
         protected const string ParamDescription = "pDESCRIPTION";
         protected const string ParamSizeInBytes = "pSIZEINBYTES";
+        protected const string ParamDate        = "pDATE";
 
         #endregion
 
@@ -123,6 +126,22 @@ namespace SeventhdGuard.DAO
                 cmd.CommandTimeout = 0;
 
                 cmd.Parameters.AddWithValue(ParamIdServer, idServer);
+
+                return ExecuteDataReaderEntities(cmd);
+            }
+        }
+
+        public IEnumerable<Video> GetVideoByDate(DateTime date)
+        {
+            Connect();
+
+            using (var cmd = objConnection.CreateCommand())
+            {
+                cmd.CommandType    = CommandType.StoredProcedure;
+                cmd.CommandText    = Sdg00020007;
+                cmd.CommandTimeout = 0;
+
+                cmd.Parameters.AddWithValue(ParamDate, date);
 
                 return ExecuteDataReaderEntities(cmd);
             }

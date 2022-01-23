@@ -12,7 +12,7 @@ namespace SeventhdGuard.API.Controllers
     {
         #region "Variables"
 
-        private ServidorBo? _servidorBo;
+        private ServidorBo _servidorBo;
 
         #endregion
 

@@ -13,7 +13,7 @@ namespace SeventhdGuard.BO
 
         public ResultInfo Add(Servidor entity)
         {
-            ResultInfo resultInfo = new ResultInfo();
+            ResultInfo resultInfo = new();
 
             try
             {
@@ -34,7 +34,7 @@ namespace SeventhdGuard.BO
 
         public ResultInfo Update(Servidor entity, string serverId)
         {
-            ResultInfo resultInfo = new ResultInfo();
+            ResultInfo resultInfo = new();
 
             try
             {
@@ -55,7 +55,7 @@ namespace SeventhdGuard.BO
 
         public ResultInfo Delete(string serverId)
         {
-            ResultInfo resultInfo = new ResultInfo();
+            ResultInfo resultInfo = new();
 
             try
             {
@@ -76,7 +76,7 @@ namespace SeventhdGuard.BO
 
         public ResultInfo<Servidor> Get(string serverId)
         {
-            ResultInfo<Servidor> resultInfo = new ResultInfo<Servidor>();
+            ResultInfo<Servidor> resultInfo = new();
 
             try
             {
@@ -92,7 +92,7 @@ namespace SeventhdGuard.BO
 
         public ResultInfo<Servidor> GetAll()
         {
-            ResultInfo<Servidor> resultInfo = new ResultInfo<Servidor>();
+            ResultInfo<Servidor> resultInfo = new();
 
             try
             {

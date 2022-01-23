@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿
+using System.Collections.Generic;
 
 namespace SeventhdGuard.DAO.Interfaces
 {
     public interface IBaseDao<TEntity>
     {
-        int Add(TEntity entity);    
-        IEnumerable<TEntity> GetAll();        
+        int Add(TEntity entity);
+        IEnumerable<TEntity> GetAll();
     }
 }

@@ -105,7 +105,7 @@ namespace SeventhdGuard.API.Controllers
             }                         
 
             return BadRequest(result.Message);
-        }
+        }       
 
         #endregion
 

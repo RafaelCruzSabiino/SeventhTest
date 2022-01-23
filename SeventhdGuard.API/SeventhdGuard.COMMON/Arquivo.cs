@@ -1,5 +1,4 @@
 ﻿using SeventhdGuard.COMMON.Interfaces;
-using System;
 using System.IO;
 
 namespace SeventhdGuard.COMMON

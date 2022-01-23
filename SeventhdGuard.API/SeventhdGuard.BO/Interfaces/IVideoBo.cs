@@ -1,5 +1,6 @@
 ﻿using SeventhdGuard.ENTITY;
 using SeventhdGuard.ENTITY.Base;
+using System;
 
 namespace SeventhdGuard.BO.Interfaces
 {
@@ -8,5 +9,6 @@ namespace SeventhdGuard.BO.Interfaces
         ResultInfo Delete(string serverId, string videoId);
         ResultInfo<Video> Get(string serverId, string videoId);
         ResultInfo<Video> GetVideoByServer(string idServer);
+        ResultInfo<Video> GetVideoByDate(DateTime date);
     }
 }

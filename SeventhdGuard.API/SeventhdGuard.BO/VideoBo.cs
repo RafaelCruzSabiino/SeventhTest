@@ -15,7 +15,7 @@ namespace SeventhdGuard.BO
 
         public ResultInfo Add(Video entity)
         {
-            ResultInfo resultInfo = new ResultInfo();
+            ResultInfo resultInfo = new();
 
             try
             {
@@ -25,7 +25,7 @@ namespace SeventhdGuard.BO
                 {
                     var upload = new Arquivo().Upload(string.Format("\\{0}", resultServer.Item.Ip), string.Format("{0}.mp4", entity.Id), System.Convert.FromBase64String(entity.Arquivo));
 
-                    if (!upload) 
+                    if (!upload)
                     {
                         throw new Exception("Erro ao inserir arquivo");
                     }
@@ -52,7 +52,7 @@ namespace SeventhdGuard.BO
 
         public ResultInfo Delete(string serverId, string videoId)
         {
-            ResultInfo resultInfo = new ResultInfo();
+            ResultInfo resultInfo = new();
 
             try
             {
@@ -78,7 +78,7 @@ namespace SeventhdGuard.BO
 
         public ResultInfo<Video> Get(string serverId, string videoId)
         {
-            ResultInfo<Video> resultInfo = new ResultInfo<Video>();
+            ResultInfo<Video> resultInfo = new();
 
             try
             {
@@ -101,7 +101,7 @@ namespace SeventhdGuard.BO
 
         public ResultInfo<Video> GetAll()
         {
-            ResultInfo<Video> resultInfo = new ResultInfo<Video>();
+            ResultInfo<Video> resultInfo = new();
 
             try
             {
@@ -130,7 +130,7 @@ namespace SeventhdGuard.BO
 
         public ResultInfo<Video> GetVideoByServer(string idServer)
         {
-            ResultInfo<Video> resultInfo = new ResultInfo<Video>();
+            ResultInfo<Video> resultInfo = new();
 
             try
             {
@@ -156,6 +156,22 @@ namespace SeventhdGuard.BO
 
             return resultInfo;
         }
+
+        public ResultInfo<Video> GetVideoByDate(DateTime date)
+        {
+            ResultInfo<Video> resultInfo = new();
+
+            try 
+            {
+                resultInfo.Items = Dao.GetVideoByDate(date);
+            }
+            catch (Exception ex)
+            {
+                resultInfo.ExceptionMapper(ex);
+            }
+
+            return resultInfo;
+        }        
 
         #endregion
     }
