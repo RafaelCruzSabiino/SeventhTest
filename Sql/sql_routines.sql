@@ -1,0 +1,333 @@
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SDG_0001_0001`(
+	pID 		 VARCHAR(45),
+    pNAME 		 VARCHAR(150),
+    pIP 		 VARCHAR(45),
+    pPORT        INT,
+    pDATE_ALTER  DATETIME,
+    pDATE_INSERT DATETIME
+)
+BEGIN
+
+	INSERT INTO
+		SDG_0001
+		(
+			ID,
+            NAME,
+            IP,
+            PORT,
+            DATE_ALTER,
+            DATE_INSERT
+        )
+        VALUES
+        (
+			pID,
+            pNAME,
+            pIP,
+            pPORT,
+            pDATE_ALTER,
+            pDATE_INSERT
+        );
+
+	SELECT ROW_COUNT() FROM DUAL;
+        
+END ;;
+DELIMITER ;
+
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SDG_0001_0002`(
+	pID 		 VARCHAR(45),
+    pNAME 		 VARCHAR(150),
+    pIP 		 VARCHAR(45),
+    pPORT        INT,
+    pDATE_ALTER  DATETIME
+)
+BEGIN
+
+	UPDATE
+		SDG_0001
+	SET
+		NAME 	   = pNAME,
+        IP 	       = pIP,
+        PORT       = pPORT,
+        DATE_ALTER = pDATE_ALTER
+	WHERE
+		ID = pID;
+        
+	SELECT ROW_COUNT() FROM DUAL;
+
+END ;;
+DELIMITER ;
+
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SDG_0001_0003`(
+	pID VARCHAR(45)
+)
+BEGIN
+
+	DELETE FROM
+		SDG_0001
+	WHERE
+		ID = pID;
+        
+	SELECT ROW_COUNT() FROM DUAL;
+
+END ;;
+DELIMITER ;
+
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SDG_0001_0004`(
+	pID VARCHAR(45)
+)
+BEGIN
+
+	SELECT
+		ID,
+        NAME,
+        IP,
+        PORT
+	FROM
+		SDG_0001
+	WHERE
+		ID = pID;
+        
+END ;;
+DELIMITER ;
+
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SDG_0001_0005`(
+	
+)
+BEGIN
+
+	SELECT
+		ID,
+        NAME,
+        IP,
+        PORT
+	FROM
+		SDG_0001;
+
+END ;;
+DELIMITER ;
+
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SDG_0002_0001`(
+	pID          VARCHAR(45),
+    pID_SERVER   VARCHAR(45),
+    pDESCRIPTION VARCHAR(45),
+    pSIZEINBYTES INT,
+    pDATE_ALTER  DATETIME,
+    pDATE_INSERT DATETIME
+)
+BEGIN
+
+	INSERT INTO
+		SDG_0002
+        (
+			ID,
+            ID_SERVER,
+            DESCRIPTION,
+            SIZEINBYTES,
+            DATE_ALTER,
+            DATE_INSERT
+        )
+        VALUES
+        (
+			pID,
+            pID_SERVER,
+            pDESCRIPTION,
+            pSIZEINBYTES,
+            pDATE_ALTER,
+            pDATE_INSERT
+        );
+        
+	SELECT ROW_COUNT() FROM DUAL;
+
+END ;;
+DELIMITER ;
+
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SDG_0002_0002`(
+	pID          VARCHAR(45),
+    pID_SERVER   VARCHAR(45),
+    pDESCRIPTION VARCHAR(45),
+    pSIZEINBYTES INT,
+    pDATE_ALTER  DATETIME
+)
+BEGIN
+
+	UPDATE
+		SDG_0002
+	SET
+		ID_SERVER   = pID_SERVER,
+        DESCRIPTION = pDESCRIPTION,
+        SIZEINBYTES = pSIZEINBYTES,
+        DATE_ALTER  = pDATE_ALTER
+	WHERE
+		ID = pID;
+        
+	SELECT ROW_COUNT() FROM DUAL;
+    
+END ;;
+DELIMITER ;
+
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SDG_0002_0003`(
+	pID VARCHAR(45),
+    pID_SERVER VARCHAR(45)
+)
+BEGIN
+
+	DELETE FROM
+		SDG_0002
+	WHERE
+		ID_SERVER = pID_SERVER
+		AND ID = pID;
+        
+	SELECT ROW_COUNT() FROM DUAL;
+	
+END ;;
+DELIMITER ;
+
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SDG_0002_0004`(
+	pID VARCHAR(45),
+    pID_SERVER VARCHAR(45)
+)
+BEGIN
+	
+    SELECT
+		ID,
+        ID_SERVER,
+        DESCRIPTION,
+        SIZEINBYTES
+	FROM
+		SDG_0002
+	WHERE
+		ID_SERVER = pID_SERVER
+		AND ID = pID;
+        
+END ;;
+DELIMITER ;
+
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SDG_0002_0005`(
+	
+)
+BEGIN
+
+	SELECT
+		ID,
+        ID_SERVER,
+        DESCRIPTION,
+        SIZEINBYTES
+	FROM
+		SDG_0002;
+
+END ;;
+DELIMITER ;
+
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SDG_0002_0006`(
+	pID_SERVER VARCHAR(45)
+)
+BEGIN
+	
+    SELECT
+		ID,
+        ID_SERVER,
+        DESCRIPTION,
+        SIZEINBYTES
+	FROM
+		SDG_0002
+	WHERE
+		ID_SERVER = pID_SERVER;
+
+END ;;
+DELIMITER ;
+
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SDG_0002_0007`(
+	pDATE DATETIME
+)
+BEGIN
+
+	SELECT
+		ID,
+        ID_SERVER
+	FROM
+		SDG_0002
+	WHERE
+		DATE_INSERT <= pDATE;
+
+END ;;
+DELIMITER ;
+
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SDG_0003_0001`(
+	pID          VARCHAR(45),
+	pTYPE        VARCHAR(45),
+    pDATE_ALTER  DATETIME,
+    pDATE_INSERT DATETIME
+)
+BEGIN
+
+	INSERT INTO
+		SDG_0003
+        (
+			ID,
+			TYPE,
+            FINISHED,
+            DATE_ALTER,
+            DATE_INSERT
+        )
+        VALUES
+        (
+			pID,
+			pTYPE,
+            0,
+            pDATE_ALTER,
+            pDATE_INSERT
+        );
+        
+	SELECT ROW_COUNT() FROM DUAL;
+
+END ;;
+DELIMITER ;
+
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SDG_0003_0002`(
+	pID         VARCHAR(45),
+	pDATE_ALTER DATETIME
+)
+BEGIN
+
+	UPDATE
+		SDG_0003
+	SET
+		FINISHED   = 1,
+		DATE_ALTER = pDATE_ALTER
+	WHERE
+		ID = pID;
+        
+	SELECT ROW_COUNT() FROM DUAL;
+
+END ;;
+DELIMITER ;
+
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SDG_0003_0003`(
+)
+BEGIN
+
+	SELECT
+		ID,
+        FINISHED
+	FROM
+		SDG_0003
+	WHERE
+		FINISHED = 0;
+
+END ;;
+DELIMITER ;
