@@ -11,7 +11,6 @@ namespace SeventhdGuard.COMMON
         {
             try
             {
-                path = "C:\\Testes"; // remover
                 if (Directory.Exists(path))
                 {
                     File.Delete(string.Format("{0}\\{1}", path, nameWithExtension));
@@ -34,7 +33,6 @@ namespace SeventhdGuard.COMMON
         {
             try
             {
-                path = "C:\\Testes"; // remover
                 if (Directory.Exists(path)) 
                 {
                     var arquivo = File.ReadAllBytes(string.Format("{0}\\{1}", path, nameWithExtension));
@@ -57,7 +55,6 @@ namespace SeventhdGuard.COMMON
         {
             try
             {
-                path = "C:\\Testes"; // remover
                 if (Directory.Exists(path))
                 {
                     File.WriteAllBytes(string.Format("{0}\\{1}", path, nameWithExtension), file);
