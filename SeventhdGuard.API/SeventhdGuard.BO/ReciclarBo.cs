@@ -14,7 +14,7 @@ namespace SeventhdGuard.BO
     {
         #region "Public Methods"
 
-        public async Task RecyclerVideo(Reciclar entity, int days)
+        public async void RecyclerVideo(Reciclar entity, int days)
         {
             await Task.FromResult(Process(entity, days));
         }
